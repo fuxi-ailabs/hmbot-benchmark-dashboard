@@ -26,7 +26,7 @@
 
 | 模型 | 状态 | 基础镜像 | 记录 |
 |---|---|---|---|
-| DeepSeek Flash / deepseek-flash | 自报完成，待静默复核；未独立验收 | `mobile-harness-deveco-v2-20261103` | 更新镜像补测：完整 npm 安装，配套 devecocli 1.3.4。模型读文件/shell与独立手机Demo预检通过，GUI Terminal前台全自动；首条用户消息仅一条，正文一致，末尾LF转换为空格。旧结果保留，本次不是独立验收。 16:12首次观察到整体交付声明，已保存全会话基线，等待至少15分钟静默复核后归档。自报限制：英文单语、无PiP/WearOS/后台通知、未注册外部深链；尚未独立验收。 |
+| DeepSeek Flash / deepseek-flash | 迁移自报完成；未独立验收 | `mobile-harness-deveco-v2-20261103` | 更新镜像独立补测，完整npm DevEco0.2.3 + devecocli1.3.4。已通过15分钟全会话静默复核，归档723普通文件与4个内部相对链接，源码/产物/原生日志SHA核验通过，专属手机/relay/VM停止，结果磁盘保留。自报23ETS、9页面、4组件、HAP和运行截图；限制英文单语、无PiP/WearOS/后台通知、未注册外部深链。未独立验收。首条消息仅1条、正文一致，末尾LF变空格。 |
 | GLM / glm-5.3 | 迁移运行中；未独立验收 | `mobile-harness-deveco-v2-20261103` | 更新镜像补测：完整 npm 安装，配套 devecocli 1.3.4。模型读文件/shell与独立手机Demo预检通过，GUI Terminal前台全自动；首条用户消息仅一条，正文一致，末尾LF转换为空格。旧结果保留，本次不是独立验收。 |
 
 ## 实验口径与待锁定项
