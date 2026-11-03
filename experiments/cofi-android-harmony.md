@@ -20,6 +20,15 @@
 | DeepSeek Flash / deepseek-flash | Claude Code 2.1.267 | 迁移自报完成 | 历史测试已执行；定位/观测受阻，未判定验收通过 | `cofi-harmony-deepseek-20261026` · 远程地址待补 | 已确认复用历史结果。 历史结果已复用 |
 | GPT / gpt-6-astra | Codex CLI 0.162.1 | 迁移自报完成 | 待独立验收 | `s1-cofi-gpt-codex-20261030` · 远程地址待补 | 14:02 北京时间完成15分钟全线程静默复核；已归档1204文件、2内部相对链接及原生日志并校验SHA；专属手机/relay/代理/VM已停止，保留磁盘。ArkTS + 离线ArkWeb；agent自报12核心测试、12组浏览器流程、19项设备内断言。WearOS、系统PiP、壁纸取色未迁移；通知/文件选择器未人工验收；unsigned HAP。gpt-6-astra/high与首条prompt SHA已核实。 日间优先 |
 
+## 更新镜像补测（独立记录）
+
+原11组结果保留；本批用户授权立即启动，豁免夜间窗口。
+
+| 模型 | 状态 | 基础镜像 | 记录 |
+|---|---|---|---|
+| DeepSeek Flash / deepseek-flash | 迁移运行中；未独立验收 | `mobile-harness-deveco-v2-20261103` | 更新镜像补测：完整 npm 安装，配套 devecocli 1.3.4。模型读文件/shell与独立手机Demo预检通过，GUI Terminal前台全自动；首条用户消息仅一条，正文一致，末尾LF转换为空格。旧结果保留，本次不是独立验收。 |
+| GLM / glm-5.3 | 迁移运行中；未独立验收 | `mobile-harness-deveco-v2-20261103` | 更新镜像补测：完整 npm 安装，配套 devecocli 1.3.4。模型读文件/shell与独立手机Demo预检通过，GUI Terminal前台全自动；首条用户消息仅一条，正文一致，末尾LF转换为空格。旧结果保留，本次不是独立验收。 |
+
 ## 实验口径与待锁定项
 
 - 固定源码：`e3212d7090b0dd3d81ec5a31cb0b0641f68c865a`。每组独立 Tart，8 CPU / 8 GiB，图形化和可见 Terminal。
