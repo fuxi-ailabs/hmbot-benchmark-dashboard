@@ -261,7 +261,7 @@
       "harness": "DevEco Code",
       "harness_version": "0.2.3",
       "cli_version": "1.3.4",
-      "migration": "迁移运行中",
+      "migration": "自报完成，待静默复核",
       "evaluation": "未独立验收",
       "run_id": "cofi-deveco-v2-glm-retest-20261103",
       "base_image": "mobile-harness-deveco-v2-20261103",
@@ -271,7 +271,7 @@
       "started_at": "2026-11-03T07:38:43.580000+00:00",
       "prompt_sha256": "5d2caab74e0e9dc5cc4078975e02982f7b8a2954b38f1efc9e3ab6d6bf4421c5",
       "source_archive_sha256": "7d408fa9c42f801317e5431795a51973e6f2fa730102a2c68cb5f9c0e7a46728",
-      "notes": "更新镜像补测：完整 npm 安装，配套 devecocli 1.3.4。模型读文件/shell与独立手机Demo预检通过，GUI Terminal前台全自动；首条用户消息仅一条，正文一致，末尾LF转换为空格。旧结果保留，本次不是独立验收。",
+      "notes": "更新镜像独立补测，完整npm DevEco0.2.3 + devecocli1.3.4。已自报整体完成，等待至少15分钟全会话静默复核；尚未归档清理。自报25源文件、8页面、en/zh双语、RDB、调试签名HAP与50项逻辑单测通过。交互未触控验证；PiP/后台计时/WearOS/动态取色/波浪进度环未迁移。未独立验收。首条消息仅1条、正文一致，末尾LF变空格。",
       "schedule_window": "用户明确授权本次立即启动，豁免夜间窗口",
       "preflight": "passed"
     }
