@@ -36,6 +36,7 @@
 | DeepSeek Flash / deepseek-flash | Claude Code 2.1.312 | cofi-skillopt-r0-20261105 | 56.4 / 100 | 87.3 / 100 | 待发布 | 33分 30秒 | 189/335（56.4%）；实际执行202条、13失败，133受阻仍计分母；采用最后有效复测，保留原始阶段。UI三页85.2/87.4/89.4。固定Harmony gold部分步骤弱于文字预期，成绩只覆盖实际断言；失败与测试方法缺口分列。迁移墙钟约2010秒，不含预检、完成静默复核及评测；token未核算。 |
 | DeepSeek Flash / deepseek-flash | Claude Code 2.1.312 | cofi-skillopt-r1-20261105 | 68.7 / 100 | 81.6 / 100 | 待发布 | 23分 53秒 | 230/335（68.7%）；有效执行239条、9失败，96受阻计入分母。首轮241条中的2条已用时间误作剩余时间的通过已撤回；39条受绑定修正影响的原用例完整复测，以最后有效结果覆盖。UI三页76.9/89.0/79.0，系统英语。固定gold部分断言只覆盖可达性；不扩展为全部业务正确。迁移墙钟1433秒；token未知。 |
 | DeepSeek Flash / deepseek-flash | Claude Code 2.1.312 | cofi-skillopt-r2-20261105 | 37.3 / 100 | 82.8 / 100 | 待发布 | 25分 30秒 | 125/335（37.3%）；实际执行174条、49失败，161受阻计入完整分母。47条失败受既有配方编辑入口崩溃阻断；另有图标面板被键盘遮挡及计时开始前预览错误显示。UI三页80.2/82.8/85.4，系统英语。固定gold部分断言只覆盖可达性；不扩展为全部业务正确。迁移墙钟1530秒；token未知。 |
+| DeepSeek Flash / deepseek-flash | Claude Code 2.1.312 | cofi-skillopt-r3-20261105 | 69.6 / 100 | 89.1 / 100 | 待发布 | 38分 20秒 | 233/335（69.6%）；实际执行245条、12失败，90受阻计入完整分母。formal-02复测全部45条可执行受影响原用例，最后有效phase覆盖对应ID。UI三页83.8/88.9/94.7，系统英语。固定gold部分断言只覆盖可达性；不扩展为全部业务正确。迁移墙钟2300秒；token未知。 |
 
 ## 迁移实验进度
 
@@ -70,6 +71,7 @@
 | DeepSeek Flash / deepseek-flash | 已归档，独立评测完成；189/335 通过；13失败、133绑定受阻；UI 3/3页 | `mobile-harness-claude-v1-20261028` | FlashRSI SkillOpt 基线 r0，从历史 Claude Code+Flash 日志提炼通用迁移 skill。固定原始355源码、8CPU/8GiB、图形Tart与可见Terminal。首个launch为参数解析失败且未调用模型；计时采用正式第二次launch。基线+3候选迁移计划仍在进行；此记录只代表基线。 |
 | DeepSeek Flash / deepseek-flash | 已归档，独立评测完成；230/335 通过；9失败、96受阻；UI 3/3页 | `mobile-harness-claude-v1-20261028` | FlashRSI SkillOpt 第1个候选。仅skill由真实Flash Worker根据基线train反馈修改；全新基础VM、原始Android源码和固定prompt，Claude Code+Flash自主迁移。候选是否被dev接受由后续上游算法决定。 |
 | DeepSeek Flash / deepseek-flash | 已归档，独立评测完成；125/335 通过；49失败、161受阻；UI 3/3页 | `mobile-harness-claude-v1-20261028` | FlashRSI SkillOpt 第2个候选。仅skill由真实Flash Worker根据上一轮train反馈修改；全新基础VM、原始Android源码和固定prompt，Claude Code+Flash自主迁移。候选是否被dev接受由上游算法决定。 |
+| DeepSeek Flash / deepseek-flash | 已归档，独立评测完成；233/335 通过；12失败、90受阻；UI 3/3页 | `mobile-harness-claude-v1-20261028` | FlashRSI SkillOpt 第3个候选，父版本为已接受的r1。真实Flash Worker提出skill补丁；全新基础VM、原始Android源码和固定prompt自主迁移。四次迁移已完成，独立评测使用最后有效phase。 |
 
 ## 实验口径与待锁定项
 
