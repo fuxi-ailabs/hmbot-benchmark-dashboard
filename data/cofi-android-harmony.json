@@ -1,6 +1,6 @@
 {
   "title": "阶段1-所有model harness组合的A2H实验",
-  "updated": "2026-11-05 11:02 CST",
+  "updated": "2026-11-05 11:04 CST",
   "timezone": "Asia/Shanghai",
   "scope": "5 models × 2 harnesses + Codex/GPT",
   "source_commit": "e3212d7090b0dd3d81ec5a31cb0b0641f68c865a",
@@ -507,11 +507,11 @@
       "harness": "Codex CLI",
       "harness_version": "0.162.1",
       "cli_version": null,
-      "migration": "自报交付，待静默复核",
+      "migration": "自报交付，已归档",
       "evaluation": "未独立验收",
       "run_id": "cofi-prompt-v2-gpt-20261105",
       "base_image": "mobile-harness-codex-chatgpt-v1-20261030",
-      "result_image": null,
+      "result_image": "cofi-prompt-v2-gpt-20261105",
       "image_url": null,
       "previous_run": "s1-cofi-gpt-codex-20261030",
       "started_at": "2026-11-05T02:12:33.058819+00:00",
@@ -520,9 +520,9 @@
       "prompt_template_sha256": "144ea78143f2673cd1a6a6bf1b870b8b12abd96bcfc4422022451b1b5dce489c",
       "prompt_sha256": "48e4c0b8d982475051ae9370abba2ca56b7a2a4b2e09578ec059bae529e85511",
       "source_archive_sha256": "7d408fa9c42f801317e5431795a51973e6f2fa730102a2c68cb5f9c0e7a46728",
-      "notes": "使用可选高保真 prompt v2，新增保留原模块划分、命名、业务逻辑、状态管理与调用关系的要求，仅做必要平台适配。独立新实验，旧结果保留；相同原始355文件，8CPU/8GiB，图形Tart与可见Terminal前台全自动。模型文本/文件读取/shell及专属设备Demo预检通过。沿用明确授权的ChatGPT登录镜像，GPT-6 Astra显式high；原生模型/effort核验通过，首条任务仅1条且prompt字节SHA精确匹配。 03:00Z原生final_answer自报核心迁移版交付，turn completed，无活动工具/子会话。已保存全会话基线，待至少15分钟静默复核。agent自报11项核心测试、13项设备内部断言及Debug/Release构建、Release安装启动；PiP、WearOS等未等价迁移，后台通知及完整触控流程未验证。设备实际为专属模拟器，原声明中的“真机”不作为设备真实性结论，未独立验收。",
+      "notes": "使用可选高保真 prompt v2，新增保留原模块划分、命名、业务逻辑、状态管理与调用关系的要求，仅做必要平台适配。独立新实验，旧结果保留；相同原始355文件，8CPU/8GiB，图形Tart与可见Terminal前台全自动。模型文本/文件读取/shell及专属设备Demo预检通过。沿用明确授权的ChatGPT登录镜像，GPT-6 Astra显式high；原生模型/effort核验通过，首条任务仅1条且prompt字节SHA精确匹配。 03:00Z原生final_answer自报核心迁移版交付，turn completed，无活动工具/子会话。已保存全会话基线，待至少15分钟静默复核。agent自报11项核心测试、13项设备内部断言及Debug/Release构建、Release安装启动；PiP、WearOS等未等价迁移，后台通知及完整触控流程未验证。设备实际为专属模拟器，原声明中的“真机”不作为设备真实性结论，未独立验收。 03:04Z按用户明确要求保存并结束实验：复核原生全会话摘要未变且无活动工具/turn后，1363普通文件、2内部相对链接及原生日志/rollout已归档SHA校验，专属手机、relay、proxy、VM全部停止，磁盘保留。本次缩短等待按用户指令执行，不记作15分钟基线复核通过。",
       "preflight": "passed",
-      "resources_stopped": false,
+      "resources_stopped": true,
       "reasoning_effort": "high",
       "schedule_window": "不受夜间窗口限制",
       "metrics": {
@@ -532,7 +532,9 @@
         "duration_seconds": null
       },
       "metrics_note": "",
-      "completion_confirmation_not_before": "2026-11-05T03:15:51.699000+00:00"
+      "archived_file_count": 1363,
+      "archived_symlink_count": 2,
+      "closure_basis": "用户明确要求保存结果并立即结束实验；全会话与基线一致且无活动工具/turn，未声称完成15分钟基线复核。"
     }
   ]
 }
