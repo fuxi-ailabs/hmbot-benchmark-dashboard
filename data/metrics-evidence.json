@@ -540,5 +540,64 @@
       }
     ],
     "limitations": "133 blocked count in denominator; some frozen Harmony assertions cover only reachability, not all prose expectations."
+  },
+  "cofi-skillopt-r1-20261105": {
+    "run_id": "cofi-skillopt-r1-20261105",
+    "updated": "2026-11-05T21:32:58+08:00",
+    "score_source": {
+      "path": "benchmark-runs/cofi-skillopt-r1-20261105/summary.json",
+      "sha256": "732f4bc79763d891c85433773618e686a19f0ffc94fb925d91b7828900546983"
+    },
+    "hap_sha256": "87f245258ff6562c07aa42b04e31ef6995014dfabded5ef4e2112ffa7fff145d",
+    "snapshot_id": "bf60c3d219d8683c4dc131e13bbf7fcb788507bd6c055b74eca2a691c7bf0646",
+    "benchmark_commit": "6963291214b1ae2b856d7737a39fd251cf7ee749",
+    "functional": {
+      "passed": 230,
+      "total": 335,
+      "failed": 9,
+      "blocked": 96,
+      "executed": 239,
+      "raw_first_phase_executed": 241,
+      "invalidated_original_passes": 2,
+      "basis": "latest-valid-phase; gate on; two semantic-observation false passes withdrawn"
+    },
+    "ui": {
+      "source": {
+        "path": "benchmark-runs/cofi-skillopt-r1-20261105/ui-scores-english/skillopt-r1-english.json",
+        "sha256": "5b2620301fd22cf44a49f52647dc0dfaba5f8ac1b274417800c32d2f15a87b22"
+      },
+      "score": 81.6,
+      "pages": 3,
+      "source_record_date": "2026-11-05",
+      "method": "Frozen benchmark ui-textbox; verified English system and App, same HAP"
+    },
+    "usage": {
+      "total_tokens": null,
+      "duration_seconds": 1433,
+      "definition": "Verified formal start to final whole-task statement, rounded wall seconds; excludes setup, stability and evaluation. Tokens unknown."
+    },
+    "sources": [
+      {
+        "path": "benchmark-runs/cofi-skillopt-r1-20261105/merged-tests.json",
+        "sha256": "6fa069766d354f663e7aa9b8d94062ce2ef7dfce1c9a64468ab9ec68f5079337"
+      },
+      {
+        "path": "benchmark-runs/cofi-skillopt-r1-20261105/result-origins.json",
+        "sha256": "99891d0aa2ba047251698240bf54074d63937fb339ba8105c4f7654ad0b3b304"
+      },
+      {
+        "path": "benchmark-runs/cofi-skillopt-r1-20261105/formal-02/gate-report.json",
+        "sha256": "1694fd3b542b7289415e628f1b23cc175aa26adcf490806f4c89b818e16a262c"
+      },
+      {
+        "path": "benchmark-runs/cofi-skillopt-r1-20261105/cleanup.json",
+        "sha256": "4462faa638e98dfe23da8c6c2a99ecbc4b3b34738fde6f2711e4c7e0a4d45187"
+      },
+      {
+        "path": "benchmark-runs/cofi-skillopt-r1-20261105/final-failure-analysis.json",
+        "sha256": "f48fc6fa0b5d4f03b0960cd9b7d136139af6a4bce1dc66b057179dd21fd7c0f6"
+      }
+    ],
+    "limitations": "96 blocked included in denominator; fixed assertions may cover only reachability. FC150/FC156 elapsed-vs-remaining mapping revoked. UI initially captured under Chinese system was superseded by verified English capture with same scores."
   }
 }
