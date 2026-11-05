@@ -535,6 +535,40 @@
       "archived_file_count": 1363,
       "archived_symlink_count": 2,
       "closure_basis": "用户明确要求保存结果并立即结束实验；全会话与基线一致且无活动工具/turn，未声称完成15分钟基线复核。"
+    },
+    {
+      "id": "cofi-dw-20261105",
+      "run_id": "cofi-dw-20261105",
+      "model_family": "GLM",
+      "model_id": "GLM-5.3",
+      "harness": "DW / DevEco Code",
+      "harness_version": "0.2.3",
+      "hmbot_version": "0.1.5",
+      "cli_version": "1.3.4",
+      "auth_method": "Huawei OAuth",
+      "migration": "迁移中",
+      "evaluation": "未独立验收",
+      "base_image": "mobile-harness-dw-v1-20261105",
+      "result_image": null,
+      "image_url": null,
+      "previous_run": null,
+      "started_at": "2026-11-05T07:34:10.191880+00:00",
+      "task_started_at": "2026-11-05T07:38:23.267000+00:00",
+      "prompt_version": "dw-builtin",
+      "prompt_sha256": "43b27dc948c36b59333896d322d8088098f107086d4f24226d2cf7ef8c385d63",
+      "builtin_command_sha256": "7d42a1caa75a4e0421c95b8c6064875ec39847a9f04e8b7612320317fbec6029",
+      "source_archive_sha256": "7d408fa9c42f801317e5431795a51973e6f2fa730102a2c68cb5f9c0e7a46728",
+      "notes": "独立DW实验，旧结果保留。用户选择镜像内置GLM-5.3及华为登录，使用/hmbot内置命令和hmbot-migrate，不套用v1/v2模板。8CPU/8GiB，图形Tart与可见Terminal前台全自动；原始355文件、独立模型read/bash与设备Demo预检通过。早先预检遇供应商排队，服务恢复后通过；宿主解锁后正式启动。原生首条user仅1条，hmbot agent及命令展开已核实，参数末尾LF转空格、命令模板末尾换行trim差异留证，不宣称字节精确匹配。基础镜像完整digest未知；不提供镜像下载URL。",
+      "preflight": "passed",
+      "resources_stopped": false,
+      "schedule_window": "用户选择内置通道，本次立即启动",
+      "metrics": {
+        "functional_score": null,
+        "ui_score": null,
+        "total_tokens": null,
+        "duration_seconds": null
+      },
+      "metrics_note": ""
     }
   ]
 }
