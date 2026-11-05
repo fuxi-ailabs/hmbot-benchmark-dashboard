@@ -44,3 +44,22 @@ git diff -- data/cofi-android-harmony.json experiments/cofi-android-harmony.md
 核对差异后，将 JSON、来源摘要、生成的 HTML/Markdown 和相关脚本提交并推送到 GitHub `main`，仓库中的文档页即更新。HTML 是可直接打开的静态页面；对外提供网页地址需要另行配置 GitHub Pages。
 
 本批口径：功能分采用各产物最新有效合并结果，通过数除以全部 335 个用例；受阻不从分母移除。历史原始通过另行标注。UI 保留对应安装包的评分及页数。Token 包含缓存读取和写入，按 Harness 原生统计，不能作为账单金额或不含缓存的 Token 比较；耗时口径逐行披露，历史日志跨度可能包含人工等待。
+
+## 在线访问（GitHub Pages）
+
+仓库已包含根目录 `index.html` 入口和 `.nojekyll`，启用 Pages 后可以直接托管现有 HTML，无需额外构建。
+
+仓库管理员或维护者首次进入 [Settings → Pages](https://github.com/mig-everything/hmbot-benchmark-dashboard/settings/pages)，在 Build and deployment 中选择：
+
+- Source：Deploy from a branch
+- Branch：`main`
+- Folder：`/ (root)`
+- 点击 Save，等待 GitHub Pages 部署完成。
+
+默认访问地址（仅在成功启用并部署后可用）：
+
+- 首页：<https://mig-everything.github.io/hmbot-benchmark-dashboard/>
+- 实验页面：<https://mig-everything.github.io/hmbot-benchmark-dashboard/experiments/cofi-android-harmony.html>
+- 直接定位成绩：<https://mig-everything.github.io/hmbot-benchmark-dashboard/experiments/cofi-android-harmony.html#migration-results>
+
+后续将生成的 HTML 和数据推送到 `main` 即会触发在线更新，无需再次设置。启用 Pages 要求仓库 admin 或 maintain 权限，只有 push 权限的账号无法开启。当前准备好静态文件不代表 Pages 已成功启用。
