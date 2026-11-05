@@ -599,5 +599,62 @@
       }
     ],
     "limitations": "96 blocked included in denominator; fixed assertions may cover only reachability. FC150/FC156 elapsed-vs-remaining mapping revoked. UI initially captured under Chinese system was superseded by verified English capture with same scores."
+  },
+  "cofi-skillopt-r2-20261105": {
+    "run_id": "cofi-skillopt-r2-20261105",
+    "updated": "2026-11-06T02:27:52+08:00",
+    "score_source": {
+      "path": "benchmark-runs/cofi-skillopt-r2-20261105/summary.json",
+      "sha256": "2fa8de4a979f54e223ce0ed8d73fe125d900ee882a9c6e3d79ddb9ab40f7bed6"
+    },
+    "hap_sha256": "e5b98ed002904b664f76c204f2c27238f48212950f37a20af4835b18f7eaedde",
+    "snapshot_id": "2e411b6facf2321124e61f029be661cd5b2b13c8cb6332f97e7d4306528cfa8d",
+    "benchmark_commit": "6963291214b1ae2b856d7737a39fd251cf7ee749",
+    "functional": {
+      "passed": 125,
+      "total": 335,
+      "failed": 49,
+      "blocked": 161,
+      "executed": 174,
+      "basis": "single frozen formal-01; normal binding gate"
+    },
+    "ui": {
+      "source": {
+        "path": "benchmark-runs/cofi-skillopt-r2-20261105/ui-scores/skillopt-r2.json",
+        "sha256": "8ae70668ce03bd955ca407c44bfeb285961ff1e342ae9f126d0da9706f9261cf"
+      },
+      "score": 82.8,
+      "pages": 3,
+      "source_record_date": "2026-11-05",
+      "method": "Frozen benchmark ui-textbox; verified English system and App, same HAP"
+    },
+    "usage": {
+      "total_tokens": null,
+      "duration_seconds": 1530,
+      "definition": "Wall clock from verified formal start 2026-11-05T16:13:00.002842+00:00 to final whole-task completion statement 2026-11-05T16:38:29.975Z; excludes setup, stability confirmation and benchmark."
+    },
+    "sources": [
+      {
+        "path": "benchmark-runs/cofi-skillopt-r2-20261105/merged-tests.json",
+        "sha256": "fc5c7cd7154a03db0638ad92adbdb6e7b668aa747263f4ec1617f2612fcde80a"
+      },
+      {
+        "path": "benchmark-runs/cofi-skillopt-r2-20261105/result-origins.json",
+        "sha256": "6b05bed86eb144bb6456850415364d3cf32d82b9c488326bd4b33aaf69855611"
+      },
+      {
+        "path": "benchmark-runs/cofi-skillopt-r2-20261105/formal-01/gate-report.json",
+        "sha256": "68f36857d28467149abdb276236bdf8c5ee6cdee8e24a818d7d2f1321ebe9007"
+      },
+      {
+        "path": "benchmark-runs/cofi-skillopt-r2-20261105/cleanup.json",
+        "sha256": "7489322d3acfb1dca6797c3f18fa834eddd6a8dd757a67a7ceec1afb531c4e4e"
+      },
+      {
+        "path": "benchmark-runs/cofi-skillopt-r2-20261105/final-failure-analysis.json",
+        "sha256": "3432eae1ae62a24aee4ab39b929c4d5d8765be105b1f7cbf308f7a7fdb7da0a7"
+      }
+    ],
+    "limitations": "161 gate-blocked cases included in denominator. 47 raw failures follow a reproduced edit-entry crash and are not independent downstream defects. Fixed gold assertions sometimes establish reachability only."
   }
 }
