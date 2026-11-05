@@ -487,5 +487,58 @@
       "total_tokens": 49115907,
       "definition": "原生逐响应 tokens.total 求和，包含同轮子会话；含缓存，推理按 Harness 原生口径；正式会话首条消息至最后响应完成，秒四舍五入。"
     }
+  },
+  "cofi-skillopt-r0-20261105": {
+    "run_id": "cofi-skillopt-r0-20261105",
+    "updated": "2026-11-05T18:50:03+08:00",
+    "score_source": {
+      "path": "benchmark-runs/cofi-skillopt-r0-20261105/summary.json",
+      "sha256": "0a8144f92b0da6790bbe0c8dfce88f15b08a05532bafee41f40f5a385bb7c8de"
+    },
+    "hap_sha256": "7d6ef0abda8bd2b31b6088546afac767f6dada733e5a594852849ecf34d14793",
+    "snapshot_id": "dc535ba4cb2e6d41aea3032ca1728a6bff9d327d001f7846ca8fdee8ab12d63d",
+    "benchmark_commit": "6963291214b1ae2b856d7737a39fd251cf7ee749",
+    "functional": {
+      "passed": 189,
+      "total": 335,
+      "failed": 13,
+      "blocked": 133,
+      "executed": 202,
+      "basis": "latest-valid-phase per case; gate on"
+    },
+    "ui": {
+      "source": {
+        "path": "benchmark-runs/cofi-skillopt-r0-20261105/ui-scores/skillopt-r0.json",
+        "sha256": "81e3df046d8bf1153e14e54cb1f57c8d22836fb08de799cae30eada3c969f655"
+      },
+      "score": 87.3,
+      "pages": 3,
+      "source_record_date": "2026-11-05",
+      "method": "Frozen benchmark ui-textbox, English, current HAP verified"
+    },
+    "usage": {
+      "total_tokens": null,
+      "duration_seconds": 2010,
+      "definition": "Verified formal start to final whole-task statement, rounded seconds; no setup/stability/evaluation time. Tokens unknown."
+    },
+    "sources": [
+      {
+        "path": "benchmark-runs/cofi-skillopt-r0-20261105/merged-tests.json",
+        "sha256": "b3cb27c9f6d64c5e1eb84b317f006c3101a8a2cca1df915e2619d932332698eb"
+      },
+      {
+        "path": "benchmark-runs/cofi-skillopt-r0-20261105/result-origins.json",
+        "sha256": "0bd55e526cf49c39e33c883494a5bcbb8d7766edd50a36473f12c27478bf4921"
+      },
+      {
+        "path": "benchmark-runs/cofi-skillopt-r0-20261105/formal-01/gate-report.json",
+        "sha256": "b77eb0c4309a4a2bc89303d9ac59748dd42b9c00b600cccb7e654dc3a30f3a0b"
+      },
+      {
+        "path": "benchmark-runs/cofi-skillopt-r0-20261105/cleanup.json",
+        "sha256": "75cdde1e3cf5329d5afb313306897741fcc948b40f757a91624b23bff793bfb0"
+      }
+    ],
+    "limitations": "133 blocked count in denominator; some frozen Harmony assertions cover only reachability, not all prose expectations."
   }
 }

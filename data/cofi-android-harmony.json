@@ -1,6 +1,6 @@
 {
   "title": "阶段1-所有model harness组合的A2H实验",
-  "updated": "2026-11-05 16:18 CST",
+  "updated": "2026-11-05T18:50:03+08:00",
   "timezone": "Asia/Shanghai",
   "scope": "5 models × 2 harnesses + Codex/GPT",
   "source_commit": "e3212d7090b0dd3d81ec5a31cb0b0641f68c865a",
@@ -569,6 +569,41 @@
         "duration_seconds": null
       },
       "metrics_note": ""
+    },
+    {
+      "id": "cofi-skillopt-r0-20261105",
+      "run_id": "cofi-skillopt-r0-20261105",
+      "model_family": "DeepSeek Flash",
+      "model_id": "deepseek-flash",
+      "harness": "Claude Code",
+      "harness_version": "2.1.312",
+      "cli_version": "2.1.312",
+      "migration": "已归档，独立评测完成",
+      "evaluation": "189/335 通过；13失败、133绑定受阻；UI 3/3页",
+      "base_image": "mobile-harness-claude-v1-20261028",
+      "result_image": "cofi-skillopt-r0-20261105",
+      "image_url": null,
+      "previous_run": null,
+      "started_at": "2026-11-05T08:35:01.278538+00:00",
+      "prompt_version": "skillopt-fixed",
+      "prompt_sha256": "a9acaf6d32a87f0584c6a6d0534d48020793089e26f3105a65d989d390815d23",
+      "source_archive_sha256": "7d408fa9c42f801317e5431795a51973e6f2fa730102a2c68cb5f9c0e7a46728",
+      "notes": "FlashRSI SkillOpt 基线 r0，从历史 Claude Code+Flash 日志提炼通用迁移 skill。固定原始355源码、8CPU/8GiB、图形Tart与可见Terminal。首个launch为参数解析失败且未调用模型；计时采用正式第二次launch。基线+3候选迁移计划仍在进行；此记录只代表基线。",
+      "preflight": "passed",
+      "resources_stopped": true,
+      "metrics": {
+        "functional_score": 56.4,
+        "ui_score": 87.3,
+        "total_tokens": null,
+        "duration_seconds": 2010
+      },
+      "metrics_note": "189/335（56.4%）；实际执行202条、13失败，133受阻仍计分母；采用最后有效复测，保留原始阶段。UI三页85.2/87.4/89.4。固定Harmony gold部分步骤弱于文字预期，成绩只覆盖实际断言；失败与测试方法缺口分列。迁移墙钟约2010秒，不含预检、完成静默复核及评测；token未核算。",
+      "algorithm": "FlashRSI SkillOpt fast-only",
+      "round_index": 0,
+      "hap_sha256": "7d6ef0abda8bd2b31b6088546afac767f6dada733e5a594852849ecf34d14793",
+      "snapshot_id": "dc535ba4cb2e6d41aea3032ca1728a6bff9d327d001f7846ca8fdee8ab12d63d",
+      "benchmark_commit": "6963291214b1ae2b856d7737a39fd251cf7ee749",
+      "schedule_window": "已授权连续SkillOpt实验"
     }
   ]
 }
