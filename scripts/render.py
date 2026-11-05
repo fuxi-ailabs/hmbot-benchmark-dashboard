@@ -28,11 +28,13 @@ page='''<!doctype html><html lang="zh-CN"><meta charset="utf-8"><meta name="view
 # Retests are independent records; keep the original 11-row matrix unchanged.
 retest_rows = []
 if d.get('retests'):
-    md += ['', '## 更新镜像补测（独立记录）', '', '原11组结果保留；本批用户授权立即启动，豁免夜间窗口。', '', '| 模型 | 状态 | 基础镜像 | 记录 |', '|---|---|---|---|']
+    md += ['', '## 镜像与 Prompt 补测（独立记录）', '', '原11组结果保留；本批用户授权立即启动，豁免夜间窗口。', '', '| 模型 | 状态 | 基础镜像 | 记录 |', '|---|---|---|---|']
     for x in d['retests']:
-        retest_rows.append('<tr><td><strong>'+e(x['model_family'])+'</strong><small>'+e(x['model_id'])+'</small></td><td>'+e(x['migration'])+'<small>'+e(x['evaluation'])+'</small></td><td><code>'+e(x['base_image'])+'</code><small>DevEco '+e(x['harness_version'])+' / CLI '+e(x['cli_version'])+'</small></td><td>'+e(x['notes'])+'<small>任务开始：'+e(x['started_at'])+' · '+e(x['schedule_window'])+'</small><code>'+e(x['run_id'])+'</code><small>'+('结果克隆：'+e(x['result_image']) if x.get('result_image') else '结果待归档')+'</small></td></tr>')
+        harness_label = x['harness']+' '+x['harness_version'] + (' / CLI '+x['cli_version'] if x.get('cli_version') else '')
+        prompt_label = ' · Prompt '+x.get('prompt_version','v1')
+        retest_rows.append('<tr><td><strong>'+e(x['model_family'])+'</strong><small>'+e(x['model_id'])+'</small></td><td>'+e(x['migration'])+'<small>'+e(x['evaluation'])+'</small></td><td><code>'+e(x['base_image'])+'</code><small>'+e(harness_label+prompt_label)+'</small></td><td>'+e(x['notes'])+'<small>任务开始：'+e(x['started_at'])+' · '+e(x['schedule_window'])+'</small><code>'+e(x['run_id'])+'</code><small>'+('结果克隆：'+e(x['result_image']) if x.get('result_image') else '结果待归档')+'</small></td></tr>')
         md.append('| '+' | '.join([x['model_family']+' / '+x['model_id'],x['migration']+'；'+x['evaluation'],'`'+x['base_image']+'`',x['notes']])+' |')
-    section='<section style="margin-top:32px"><h2>更新镜像补测 · '+e(d['updated'])+'</h2><p class="intro">独立补测记录，原11组结果保留。本批用户授权立即启动，豁免夜间窗口。结果克隆归档状态见各行；暂无已核实的远程下载地址。</p><div class="table-wrap"><table><thead><tr><th>模型</th><th>状态</th><th>基础镜像 / 版本</th><th>记录</th></tr></thead><tbody>'+''.join(retest_rows)+'</tbody></table></div></section>'
+    section='<section style="margin-top:32px"><h2>镜像与 Prompt 补测 · '+e(d['updated'])+'</h2><p class="intro">独立补测记录，原11组及既有补测均保留。Prompt v2 新增高保真迁移要求；各组镜像、模板与启动例外见记录。结果克隆归档状态见各行；暂无已核实的远程下载地址。</p><div class="table-wrap"><table><thead><tr><th>模型</th><th>状态</th><th>基础镜像 / 版本</th><th>记录</th></tr></thead><tbody>'+''.join(retest_rows)+'</tbody></table></div></section>'
     page=page.replace('<div class="details">',section+'<div class="details">')
     page=page.replace("document.querySelectorAll('tbody tr')", "document.querySelectorAll('tr[data-state]')")
     page=page.replace('更新时间：2026-10-30','更新时间：'+d['updated'])
