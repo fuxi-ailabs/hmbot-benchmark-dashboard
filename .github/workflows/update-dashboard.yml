@@ -1,0 +1,69 @@
+name: Update migration dashboard
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'data/**'
+      - 'scripts/render.py'
+      - 'index.html'
+      - '.nojekyll'
+      - '.github/workflows/update-dashboard.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pages: write
+
+concurrency:
+  group: update-migration-dashboard
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      # Always build the latest main, including pushes queued while another build ran.
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Render pages and record the published data version
+        run: |
+          python3 scripts/render.py
+          python3 - <<'PY'
+          import hashlib, json, subprocess
+          from pathlib import Path
+          ledger = Path('data/cofi-android-harmony.json')
+          data = json.loads(ledger.read_text())
+          rows = data['experiments'] + data.get('retests', [])
+          ids = [row['run_id'] for row in rows]
+          assert len(ids) == len(set(ids)), 'Duplicate run IDs'
+          json.loads(Path('data/metrics-evidence.json').read_text())
+          version = {
+              'source_commit': subprocess.check_output(['git', 'rev-parse', 'HEAD'], text=True).strip(),
+              'ledger_sha256': hashlib.sha256(ledger.read_bytes()).hexdigest(),
+              'ledger_updated': data['updated'],
+              'rows': len(rows),
+          }
+          Path('data/site-version.json').write_text(json.dumps(version, ensure_ascii=False, indent=2) + '\n')
+          PY
+          git diff --check
+      - name: Commit generated pages
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add experiments/cofi-android-harmony.html experiments/cofi-android-harmony.md data/site-version.json
+          if ! git diff --cached --quiet; then
+            git commit -m 'Regenerate migration dashboard from published results'
+            # A concurrent human push causes a safe failure; never force-push main.
+            git push origin HEAD:main
+          fi
+      # GITHUB_TOKEN commits do not trigger the branch-based Pages publisher.
+      # Explicitly request its build after generated files reach main.
+      - name: Request GitHub Pages deployment
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh api --method POST "repos/${GITHUB_REPOSITORY}/pages/builds"

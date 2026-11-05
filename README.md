@@ -6,7 +6,7 @@
 
 数据源：`data/cofi-android-harmony.json`。更新数据后运行 `python3 scripts/render.py` 同步生成 HTML 和 GitHub 文档版。页面登记执行进度与历史证据；实验调度由独立队列管理。阶段1复用6组历史结果、补跑5组，最多2台Tart并行，DeepSeek/GLM在北京时间夜间启动。
 
-六组历史迁移自报完成不代表独立验收通过；本地 Tart 克隆名称不等于远程下载地址。尚未配置 GitHub Pages。
+六组历史迁移自报完成不代表独立验收通过；本地 Tart 克隆名称不等于远程下载地址。已启用 GitHub Pages：<https://mig-everything.github.io/hmbot-benchmark-dashboard/>。
 
 ## 迁移测评结果
 
@@ -41,25 +41,32 @@ git diff -- data/cofi-android-harmony.json experiments/cofi-android-harmony.md
 
 导入器按安装包版本映射原始实验和补测，核验安装包 SHA-256。它只输出指标、计数、来源文件哈希及统计说明到 `data/metrics-evidence.json`，不会复制原生日志或凭据。新增实验的来源映射需在导入器中显式登记；缺失指标保持 `null`。导入器会重建已有映射的指标和说明，手工修正应先更新对应证据与映射。
 
-核对差异后，将 JSON、来源摘要、生成的 HTML/Markdown 和相关脚本提交并推送到 GitHub `main`，仓库中的文档页即更新。HTML 是可直接打开的静态页面；对外提供网页地址需要另行配置 GitHub Pages。
+核对差异后，将 JSON、来源摘要、生成的 HTML/Markdown 和相关脚本提交并推送到 GitHub `main`，仓库中的文档页即更新。推送结果 JSON 后，GitHub Actions 会自动重新生成 HTML/Markdown 并触发现有 GitHub Pages 部署，不需要手工提交生成页。
 
 本批口径：功能分采用各产物最新有效合并结果，通过数除以全部 335 个用例；受阻不从分母移除。历史原始通过另行标注。UI 保留对应安装包的评分及页数。Token 包含缓存读取和写入，按 Harness 原生统计，不能作为账单金额或不含缓存的 Token 比较；耗时口径逐行披露，历史日志跨度可能包含人工等待。
 
-## 在线访问（GitHub Pages）
+## 在线访问与自动更新
 
-仓库已包含根目录 `index.html` 入口和 `.nojekyll`，启用 Pages 后可以直接托管现有 HTML，无需额外构建。
+在线地址：<https://mig-everything.github.io/hmbot-benchmark-dashboard/experiments/cofi-android-harmony.html#migration-results>
 
-仓库管理员或维护者首次进入 [Settings → Pages](https://github.com/mig-everything/hmbot-benchmark-dashboard/settings/pages)，在 Build and deployment 中选择：
+GitHub Pages 已配置为 `main` 的 `/ (root)`。工作流 [Update migration dashboard](https://github.com/mig-everything/hmbot-benchmark-dashboard/actions/workflows/update-dashboard.yml) 会在 `main` 收到 `data/**`、生成脚本、首页或工作流的修改后：
 
-- Source：Deploy from a branch
-- Branch：`main`
-- Folder：`/ (root)`
-- 点击 Save，等待 GitHub Pages 部署完成。
+1. 读取仓库内最新结果 JSON，生成 HTML 和 GitHub Markdown 文档。
+2. 检查指标格式和运行 ID，提交生成页及 `data/site-version.json`。
+3. 显式请求 Pages 构建。机器人提交本身不会触发分支式 Pages 发布，因此此步骤不可省略。
 
-默认访问地址（仅在成功启用并部署后可用）：
+日常只需把已核实的指标写入 `data/cofi-android-harmony.json`，同时补充 `data/metrics-evidence.json` 的来源摘要，提交并推送到 `main`。新增产物登记独立运行 ID，旧版本保留；不能仅把原始结果推到其他仓库或本地 `benchmark-runs/`，期待网页自动发现。
 
-- 首页：<https://mig-everything.github.io/hmbot-benchmark-dashboard/>
-- 实验页面：<https://mig-everything.github.io/hmbot-benchmark-dashboard/experiments/cofi-android-harmony.html>
-- 直接定位成绩：<https://mig-everything.github.io/hmbot-benchmark-dashboard/experiments/cofi-android-harmony.html#migration-results>
+```sh
+# 已在 Dashboard 仓库中更新对应记录及来源摘要后：
+git diff --check
+git add data/cofi-android-harmony.json data/metrics-evidence.json
+git commit -m "Update migration evaluation results"
+git push origin HEAD:main
+```
 
-后续将生成的 HTML 和数据推送到 `main` 即会触发在线更新，无需再次设置。启用 Pages 要求仓库 admin 或 maintain 权限，只有 push 权限的账号无法开启。当前准备好静态文件不代表 Pages 已成功启用。
+有已审核的本地来源映射时可以先运行 `scripts/import_metrics.py`。该脚本依赖本地证据，覆盖已映射的指标；新增或更新测评须先修改映射，避免用旧摘要覆盖新结果。云端工作流不会运行它，也不需要本地磁盘、设备、模型密钥或原生日志。
+
+推送后查看 Actions 和 Pages 部署是否成功，再访问在线 `data/site-version.json`，核对 `ledger_sha256` 与本次结果 JSON 的 SHA-256 一致。页面受缓存和部署时间影响，浏览器刷新后生效；不是已打开页面的实时推送。工作流失败时保留原结果和日志；并发推送冲突时先检查最新 `main`，可手动运行工作流重试，不强推。
+
+工作流仅写回生成文件，使用仓库自动提供的 `GITHUB_TOKEN`（contents/pages write），无需新增个人 Token。若组织策略禁止机器人写入或 Pages 构建，Actions 会显示错误，不应宣称发布成功。
