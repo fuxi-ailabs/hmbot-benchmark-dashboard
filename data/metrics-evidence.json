@@ -1,0 +1,491 @@
+{
+  "minimax-deveco": {
+    "run_id": "s1-cofi-minimax-deveco-20261030",
+    "score_source": {
+      "path": "benchmark-runs/cofi-eleven-rounds45-20261104/results.json",
+      "sha256": "16c01904af5383e972f7d1cdce43188b1d3f19e1fd0a3f6db41b6a871c9d7e28"
+    },
+    "hap_sha256": "60d1f098212784c402b14b3b2e868b6503dc872b4851b4a894562459a8c1cab8",
+    "benchmark_commit": "6963291214b1ae2b856d7737a39fd251cf7ee749",
+    "functional": {
+      "passed": 0,
+      "total": 335,
+      "blocked": 335,
+      "basis": "verified"
+    },
+    "ui": {
+      "source_record_date": "2026-11-02",
+      "score": 58.4,
+      "pages": 2,
+      "note": "同一安装包既有 UI 评分，本轮没有重新评分。",
+      "source_path": "stage1-summary-20261102/before-three-rounds-summary.json"
+    },
+    "usage": {
+      "source": {
+        "path": "experiments/s1-cofi-minimax-deveco-20261030/collected-20261030T051745Z/native-sessions.json",
+        "sha256": "86f5bb9a181b70561beee7cb92b6bc1736ec18638eb539c7e903ee98c8f160c7"
+      },
+      "session_ids": [
+        "ses_e74faee65ffeoHEGKA8SG3G1Aa",
+        "ses_e74facea6ffeDsI5FgBcILQ6MD"
+      ],
+      "responses": 330,
+      "total_tokens": 80403071,
+      "definition": "原生逐响应 tokens.total 求和，包含同轮子会话；含缓存，推理按 Harness 原生口径；正式会话首条消息至最后响应完成，秒四舍五入。"
+    }
+  },
+  "minimax-claude": {
+    "run_id": "cofi-harmony-minimax-20261026",
+    "score_source": {
+      "path": "benchmark-runs/cofi-eleven-rounds45-20261104/results.json",
+      "sha256": "16c01904af5383e972f7d1cdce43188b1d3f19e1fd0a3f6db41b6a871c9d7e28"
+    },
+    "hap_sha256": "7e3c91c4e20ef1e37ad21f9414b3863b5f1533602d547ec41aef694c569c5606",
+    "benchmark_commit": "6963291214b1ae2b856d7737a39fd251cf7ee749",
+    "functional": {
+      "passed": 222,
+      "total": 335,
+      "blocked": 1,
+      "basis": "historical_raw"
+    },
+    "ui": {
+      "source_record_date": "2026-11-02",
+      "score": 84.9,
+      "pages": 3,
+      "note": "同一安装包既有 UI 评分，本轮没有重新评分。",
+      "source_path": "stage1-summary-20261102/before-three-rounds-summary.json"
+    },
+    "usage": {
+      "source": {
+        "path": "harmony-binding-recheck-20261028/migloop-analysis/summary.json",
+        "sha256": "512bcfa4313fb1915b90de2f3e39ac4d6745a6ffb0f2847be20567e04b40ba6e"
+      },
+      "input_tokens": 175534589,
+      "output_tokens": 325885,
+      "wall_span_ms": 6993214,
+      "definition": "输入（含缓存读取/写入）+输出；日志跨度含人工等待。"
+    }
+  },
+  "qwen-deveco": {
+    "run_id": "s1-cofi-qwen-deveco-20261030",
+    "score_source": {
+      "path": "benchmark-runs/cofi-eleven-rounds45-20261104/results.json",
+      "sha256": "16c01904af5383e972f7d1cdce43188b1d3f19e1fd0a3f6db41b6a871c9d7e28"
+    },
+    "hap_sha256": "c3acca91e10e975d72854e8158bcf38cb5338064624cc4b8c1ae071ef903c58a",
+    "benchmark_commit": "6963291214b1ae2b856d7737a39fd251cf7ee749",
+    "functional": {
+      "passed": 145,
+      "total": 335,
+      "blocked": 187,
+      "basis": "verified"
+    },
+    "ui": {
+      "source_record_date": "2026-11-02",
+      "score": 88.3,
+      "pages": 3,
+      "note": "同一安装包既有 UI 评分，本轮没有重新评分。",
+      "source_path": "stage1-summary-20261102/before-three-rounds-summary.json"
+    },
+    "usage": {
+      "source": {
+        "path": "experiments/s1-cofi-qwen-deveco-20261030/collected-20261030T061706Z/native-sessions.json",
+        "sha256": "2fe06ad80213f86c03f04f208f73c9623e4aa34e3cf0d07723b2c316a87113e1"
+      },
+      "session_ids": [
+        "ses_e74f7e08bffeQRavkS8gaJ4Roj"
+      ],
+      "responses": 221,
+      "total_tokens": 58669974,
+      "definition": "原生逐响应 tokens.total 求和，包含同轮子会话；含缓存，推理按 Harness 原生口径；正式会话首条消息至最后响应完成，秒四舍五入。"
+    }
+  },
+  "qwen-claude": {
+    "run_id": "cofi-harmony-qwen-20261026",
+    "score_source": {
+      "path": "benchmark-runs/cofi-eleven-rounds45-20261104/results.json",
+      "sha256": "16c01904af5383e972f7d1cdce43188b1d3f19e1fd0a3f6db41b6a871c9d7e28"
+    },
+    "hap_sha256": "8a9b23f0e66898d9cc63ab307be6c950c6577002ce10f6da79ae854c0e85b851",
+    "benchmark_commit": "6963291214b1ae2b856d7737a39fd251cf7ee749",
+    "functional": {
+      "passed": 254,
+      "total": 335,
+      "blocked": 1,
+      "basis": "historical_raw"
+    },
+    "ui": {
+      "source_record_date": "2026-11-02",
+      "score": 84.5,
+      "pages": 3,
+      "note": "同一安装包既有 UI 评分，本轮没有重新评分。",
+      "source_path": "stage1-summary-20261102/before-three-rounds-summary.json"
+    },
+    "usage": {
+      "source": {
+        "path": "harmony-binding-recheck-20261028/migloop-analysis/summary.json",
+        "sha256": "512bcfa4313fb1915b90de2f3e39ac4d6745a6ffb0f2847be20567e04b40ba6e"
+      },
+      "input_tokens": 26185278,
+      "output_tokens": 285357,
+      "wall_span_ms": 14340506,
+      "definition": "输入（含缓存读取/写入）+输出；日志跨度含人工等待。"
+    }
+  },
+  "cofi-deveco-v2-glm-retest-20261103": {
+    "run_id": "cofi-deveco-v2-glm-retest-20261103",
+    "score_source": {
+      "path": "benchmark-runs/cofi-eleven-rounds45-20261104/results.json",
+      "sha256": "16c01904af5383e972f7d1cdce43188b1d3f19e1fd0a3f6db41b6a871c9d7e28"
+    },
+    "hap_sha256": "84e90f994c2532c29fc11cc9054898e637d9fec4ad3ab19ad36ea68bb056b80d",
+    "benchmark_commit": "6963291214b1ae2b856d7737a39fd251cf7ee749",
+    "functional": {
+      "passed": 206,
+      "total": 335,
+      "blocked": 116,
+      "basis": "verified"
+    },
+    "ui": {
+      "source_record_date": "2026-11-03",
+      "score": 88.3,
+      "pages": 3,
+      "note": "同一安装包既有 UI 评分，本轮没有重新评分。",
+      "source_path": "benchmark-runs/cofi-v2-retest-20261103/glm-deveco-v2/ui-input-manifest.json"
+    },
+    "usage": {
+      "source": {
+        "path": "experiments/cofi-deveco-v2-glm-retest-20261103/collected-20261103T091229Z/native-sessions.json",
+        "sha256": "17cf479ebd4be312cab645f0526a11b3c8204b146197fc3126bbdf7085fe2028"
+      },
+      "session_ids": [
+        "ses_e5fa76603ffeKtIc3g1EO5CQAY",
+        "ses_e5fa6bf7bffeJPKw5R6lcWQ3YQ",
+        "ses_e5fa69f21ffeonYBIasEF8fV5c"
+      ],
+      "responses": 259,
+      "total_tokens": 37312464,
+      "definition": "原生逐响应 tokens.total 求和，包含同轮子会话；含缓存，推理按 Harness 原生口径；正式会话首条消息至最后响应完成，秒四舍五入。"
+    }
+  },
+  "glm-claude": {
+    "run_id": "cofi-harmony-glm-20261026",
+    "score_source": {
+      "path": "benchmark-runs/cofi-eleven-rounds45-20261104/results.json",
+      "sha256": "16c01904af5383e972f7d1cdce43188b1d3f19e1fd0a3f6db41b6a871c9d7e28"
+    },
+    "hap_sha256": "45a838423c3980097e0600d83c6fab68761b9b17d3ab6d3630a85fad12d05e97",
+    "benchmark_commit": "6963291214b1ae2b856d7737a39fd251cf7ee749",
+    "functional": {
+      "passed": 264,
+      "total": 335,
+      "blocked": 1,
+      "basis": "historical_raw"
+    },
+    "ui": {
+      "source_record_date": "2026-11-02",
+      "score": 86.7,
+      "pages": 3,
+      "note": "同一安装包既有 UI 评分，本轮没有重新评分。",
+      "source_path": "stage1-summary-20261102/before-three-rounds-summary.json"
+    },
+    "usage": {
+      "source": {
+        "path": "harmony-binding-recheck-20261028/migloop-analysis/summary.json",
+        "sha256": "512bcfa4313fb1915b90de2f3e39ac4d6745a6ffb0f2847be20567e04b40ba6e"
+      },
+      "input_tokens": 23195587,
+      "output_tokens": 123098,
+      "wall_span_ms": 3263770,
+      "definition": "输入（含缓存读取/写入）+输出；日志跨度含人工等待。"
+    }
+  },
+  "cofi-deveco-v2-deepseek-pro-retest-20261104": {
+    "run_id": "cofi-deveco-v2-deepseek-pro-retest-20261104",
+    "score_source": {
+      "path": "benchmark-runs/cofi-eleven-rounds45-20261104/results.json",
+      "sha256": "16c01904af5383e972f7d1cdce43188b1d3f19e1fd0a3f6db41b6a871c9d7e28"
+    },
+    "hap_sha256": "9bce1f982959ff63afd31634e0e272e9a43b8a540aa794ac0776774fca3d27f0",
+    "benchmark_commit": "6963291214b1ae2b856d7737a39fd251cf7ee749",
+    "functional": {
+      "passed": 157,
+      "total": 335,
+      "blocked": 173,
+      "basis": "new_artifact_unverified"
+    },
+    "ui": {
+      "source_record_date": "2026-11-04",
+      "score": 83.5,
+      "pages": 3,
+      "note": "新产物必须独立评分，旧版本分数不沿用。",
+      "source_path": "benchmark-runs/cofi-eleven-rounds45-20261104/deepseek-pro-deveco/ui-scores/deepseek-pro-deveco.json"
+    },
+    "usage": {
+      "source": {
+        "path": "experiments/cofi-deveco-v2-deepseek-pro-retest-20261104/collected-20261104T023603Z/native-sessions.json",
+        "sha256": "65306c79652677e093026ead459dcda6876e7735bcd41d2a177a11e0d11a578d"
+      },
+      "session_ids": [
+        "ses_e5bc12042ffeEwn2b5YwMlR23p"
+      ],
+      "responses": 121,
+      "total_tokens": 26473247,
+      "definition": "原生逐响应 tokens.total 求和，包含同轮子会话；含缓存，推理按 Harness 原生口径；正式会话首条消息至最后响应完成，秒四舍五入。"
+    }
+  },
+  "deepseek-pro-claude": {
+    "run_id": "cofi-harmony-deepseek-pro-retest-20261028",
+    "score_source": {
+      "path": "benchmark-runs/cofi-eleven-rounds45-20261104/results.json",
+      "sha256": "16c01904af5383e972f7d1cdce43188b1d3f19e1fd0a3f6db41b6a871c9d7e28"
+    },
+    "hap_sha256": "78c20e91fe7456c8d25d6d1cf4775092b349b977878b32f5a5b37f33e05e07cf",
+    "benchmark_commit": "6963291214b1ae2b856d7737a39fd251cf7ee749",
+    "functional": {
+      "passed": 151,
+      "total": 335,
+      "blocked": 178,
+      "basis": "verified"
+    },
+    "ui": {
+      "source_record_date": "2026-11-02",
+      "score": 84.8,
+      "pages": 3,
+      "note": "同一安装包既有 UI 评分，本轮没有重新评分。",
+      "source_path": "stage1-summary-20261102/before-three-rounds-summary.json"
+    },
+    "usage": {
+      "source": {
+        "path": "harmony-pro-retest-evaluation-20261028/result-summary.json",
+        "sha256": "b317da07655144b8bf00c1599bee4c05d7c4dda43e4441dfe9f0808156ea5089"
+      },
+      "input_tokens": 11420162,
+      "output_tokens": 129728,
+      "wall_span_ms": 1511397,
+      "definition": "输入（含缓存读取/写入）+输出；日志跨度含人工等待。"
+    }
+  },
+  "cofi-deveco-v2-flash-retest-20261103": {
+    "run_id": "cofi-deveco-v2-flash-retest-20261103",
+    "score_source": {
+      "path": "benchmark-runs/cofi-eleven-rounds45-20261104/results.json",
+      "sha256": "16c01904af5383e972f7d1cdce43188b1d3f19e1fd0a3f6db41b6a871c9d7e28"
+    },
+    "hap_sha256": "fb0439ac44f6b6e66e613582b2df1b684f6ffe1f7e4cfe6fa631f9c1d74cffac",
+    "benchmark_commit": "6963291214b1ae2b856d7737a39fd251cf7ee749",
+    "functional": {
+      "passed": 238,
+      "total": 335,
+      "blocked": 88,
+      "basis": "verified"
+    },
+    "ui": {
+      "source_record_date": "2026-11-03",
+      "score": 81.2,
+      "pages": 3,
+      "note": "同一安装包既有 UI 评分，本轮没有重新评分。",
+      "source_path": "benchmark-runs/cofi-v2-retest-20261103/flash-deveco-v2/ui-input-manifest.json"
+    },
+    "usage": {
+      "source": {
+        "path": "experiments/cofi-deveco-v2-flash-retest-20261103/collected-20261103T082752Z/native-sessions.json",
+        "sha256": "7c1993f75e7123580a45671f8d13c17ce4adc66c28d4a3cc17d072dac2d54eff"
+      },
+      "session_ids": [
+        "ses_e5fa849cfffeahqFhHTtSI1xjt"
+      ],
+      "responses": 210,
+      "total_tokens": 48480403,
+      "definition": "原生逐响应 tokens.total 求和，包含同轮子会话；含缓存，推理按 Harness 原生口径；正式会话首条消息至最后响应完成，秒四舍五入。"
+    }
+  },
+  "deepseek-flash-claude": {
+    "run_id": "cofi-harmony-deepseek-20261026",
+    "score_source": {
+      "path": "benchmark-runs/cofi-eleven-rounds45-20261104/results.json",
+      "sha256": "16c01904af5383e972f7d1cdce43188b1d3f19e1fd0a3f6db41b6a871c9d7e28"
+    },
+    "hap_sha256": "05c7cc4593ddbf056361eecdd5c42eca17c5c93f1d7296cf81c01c238ec81819",
+    "benchmark_commit": "6963291214b1ae2b856d7737a39fd251cf7ee749",
+    "functional": {
+      "passed": 241,
+      "total": 335,
+      "blocked": 1,
+      "basis": "historical_raw"
+    },
+    "ui": {
+      "source_record_date": "2026-11-02",
+      "score": 84.1,
+      "pages": 3,
+      "note": "同一安装包既有 UI 评分，本轮没有重新评分。",
+      "source_path": "stage1-summary-20261102/before-three-rounds-summary.json"
+    },
+    "usage": {
+      "source": {
+        "path": "harmony-binding-recheck-20261028/migloop-analysis/summary.json",
+        "sha256": "512bcfa4313fb1915b90de2f3e39ac4d6745a6ffb0f2847be20567e04b40ba6e"
+      },
+      "input_tokens": 46306477,
+      "output_tokens": 246761,
+      "wall_span_ms": 14542838,
+      "definition": "输入（含缓存读取/写入）+输出；日志跨度含人工等待。"
+    }
+  },
+  "gpt-codex": {
+    "run_id": "s1-cofi-gpt-codex-20261030",
+    "score_source": {
+      "path": "benchmark-runs/cofi-eleven-rounds45-20261104/results.json",
+      "sha256": "16c01904af5383e972f7d1cdce43188b1d3f19e1fd0a3f6db41b6a871c9d7e28"
+    },
+    "hap_sha256": "2ca1e274e79368defb3f3d69f73ecf373865caca56bb0daa940eaa06cd897de7",
+    "benchmark_commit": "6963291214b1ae2b856d7737a39fd251cf7ee749",
+    "functional": {
+      "passed": 153,
+      "total": 335,
+      "blocked": 165,
+      "basis": "verified"
+    },
+    "ui": {
+      "source_record_date": "2026-11-02",
+      "score": 76.8,
+      "pages": 3,
+      "note": "同一安装包既有 UI 评分，本轮没有重新评分。",
+      "source_path": "stage1-summary-20261102/before-three-rounds-summary.json"
+    },
+    "usage": {
+      "source": {
+        "path": "experiments/s1-cofi-gpt-codex-20261030/collected-20261030T060216Z/native-rollouts/01a18b40-37ca-7bf1-b357-d056286a70f7.jsonl",
+        "sha256": "0d0e37b9c6a6c91bbbf547c6d6d84f86fcab5211111ec8598c59df141fdcb198"
+      },
+      "total_token_usage": {
+        "input_tokens": 7178569,
+        "cached_input_tokens": 7048832,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 54435,
+        "reasoning_output_tokens": 8252,
+        "total_tokens": 7233004
+      },
+      "definition": "最后一条累计 total_tokens（包含缓存；推理已含于输出，不重复相加）；任务开始至完成被观察到的墙钟时长。",
+      "start": "2026-10-30T05:20:04+00:00",
+      "end": "2026-10-30T05:47:10.830144+00:00"
+    }
+  },
+  "deepseek-pro-deveco": {
+    "run_id": "s1-cofi-deepseek-pro-deveco-20261030",
+    "score_source": {
+      "path": "benchmark-runs/cofi-eleven-three-rounds-20261103/results.json",
+      "sha256": "92c4a23ff125ba29c8b29a62d8ed6125f21d896d0ccb057f72cdb155cfefeaec"
+    },
+    "hap_sha256": "a4abf7477e12e2f256e0197d1aa3d46a4c5d6c8c3e6262116473a331ac6a11d7",
+    "benchmark_commit": "6963291214b1ae2b856d7737a39fd251cf7ee749",
+    "functional": {
+      "passed": 148,
+      "total": 335,
+      "blocked": 180,
+      "basis": "verified"
+    },
+    "ui": {
+      "source_record_date": "2026-11-02",
+      "score": 73.1,
+      "pages": 3,
+      "note": "同一安装包既有 UI 评分，本轮没有重新评分。",
+      "source_path": "stage1-summary-20261102/before-three-rounds-summary.json"
+    },
+    "usage": {
+      "source": {
+        "path": "experiments/s1-cofi-deepseek-pro-deveco-20261030/collected-20261030T131408Z/native-sessions.json",
+        "sha256": "d193897e03f8ea2b494a271441ccd940e042793ea8256b2d217634df14a42c6b"
+      },
+      "session_ids": [
+        "ses_e733a95a9ffeh707tUbwJ8DEGH"
+      ],
+      "responses": 123,
+      "total_tokens": 24483914,
+      "definition": "原生逐响应 tokens.total 求和，包含同轮子会话；含缓存，推理按 Harness 原生口径；正式会话首条消息至最后响应完成，秒四舍五入。"
+    }
+  },
+  "glm-deveco": {
+    "run_id": "cofi-deveco-pro-20261029",
+    "score_source": {
+      "path": "benchmark-runs/cofi-blockers-20261031/glm-deveco/results.json",
+      "sha256": "1855bec954062b537f60c50004c6c709e13fe137203645be8fb273531764613b"
+    },
+    "hap_sha256": "e58e3db86fd523aac7dbe4cf0d7afbe367e105a353c30d6f5bd166f421668dca",
+    "benchmark_commit": "6963291214b1ae2b856d7737a39fd251cf7ee749",
+    "functional": {
+      "passed": 186,
+      "total": 335,
+      "blocked": 146,
+      "basis": "verified"
+    },
+    "ui": {
+      "source_record_date": "2026-10-30",
+      "score": 84.2,
+      "pages": 3,
+      "note": "",
+      "source_path": "benchmark-runs/cofi-stage1-20261030/glm-deveco/results.json"
+    },
+    "usage": {
+      "source": {
+        "path": "experiments/cofi-deveco-pro-20261029/collected/native-session.json",
+        "sha256": "09d4b7154d8dd9b0fe8563cb929f004d3a6b1385a9156b305f1d43585b9296cc"
+      },
+      "session_ids": [
+        "ses_e79563080ffe3Qo2ukeM73dIMo"
+      ],
+      "responses": 273,
+      "total_tokens": 51470109,
+      "definition": "原生逐响应 tokens.total 求和，包含同轮子会话；含缓存，推理按 Harness 原生口径；正式会话首条消息至最后响应完成，秒四舍五入。"
+    }
+  },
+  "deepseek-flash-deveco": {
+    "run_id": "s1-cofi-deepseek-flash-deveco-20261030",
+    "score_source": {
+      "path": "benchmark-runs/cofi-stage1-completion-20261102/deepseek-flash-deveco/results.json",
+      "sha256": "e91fdcc9a429d654537482df6cc2ac7a87c1ee0df5e2c749caaa525230d3c1ce"
+    },
+    "hap_sha256": "2ee23c4f7c32ed8ae2c1eb35b73c5dfc6fe3ead6836bf1671a2d692abbbc8152",
+    "benchmark_commit": "6963291214b1ae2b856d7737a39fd251cf7ee749",
+    "functional": {
+      "passed": 92,
+      "total": 335,
+      "blocked": 239,
+      "basis": "verified"
+    },
+    "ui": {
+      "source_record_date": "2026-11-02",
+      "score": 82.3,
+      "pages": 3,
+      "note": "",
+      "source_path": "benchmark-runs/cofi-stage1-completion-20261102/deepseek-flash-deveco/ui-scores/deepseek-flash-deveco.json"
+    },
+    "usage": {
+      "source": {
+        "path": "experiments/s1-cofi-deepseek-flash-deveco-20261030/collected-20261030T131420Z/native-sessions.json",
+        "sha256": "d5eedd2149fb14ef6def2a1a40751db03819cc07b1f0c55e42340e79ed69e5be"
+      },
+      "session_ids": [
+        "ses_e733cb590ffe74kSz5ISjc692n"
+      ],
+      "responses": 282,
+      "total_tokens": 86127392,
+      "definition": "原生逐响应 tokens.total 求和，包含同轮子会话；含缓存，推理按 Harness 原生口径；正式会话首条消息至最后响应完成，秒四舍五入。"
+    }
+  },
+  "cofi-deveco-v2-qwen-retest-20261104": {
+    "run_id": "cofi-deveco-v2-qwen-retest-20261104",
+    "usage": {
+      "source": {
+        "path": "experiments/cofi-deveco-v2-qwen-retest-20261104/collected-20261104T025209Z/native-sessions.json",
+        "sha256": "4ce892b6654151498bb7f8ce76cc9016e84f158e68acb5e56b6e99ac366e8f97"
+      },
+      "session_ids": [
+        "ses_e5bdfe927ffe67YEcFsMnsm7bb"
+      ],
+      "responses": 186,
+      "total_tokens": 49115907,
+      "definition": "原生逐响应 tokens.total 求和，包含同轮子会话；含缓存，推理按 Harness 原生口径；正式会话首条消息至最后响应完成，秒四舍五入。"
+    }
+  }
+}

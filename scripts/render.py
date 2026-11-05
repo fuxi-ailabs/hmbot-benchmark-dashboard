@@ -1,5 +1,5 @@
 """Render the standalone experiment page from the public, credential-free ledger."""
-import json, html
+import json, html, math
 from pathlib import Path
 root = Path(__file__).resolve().parents[1]
 d = json.loads((root/'data/cofi-android-harmony.json').read_text())
@@ -38,6 +38,43 @@ if d.get('retests'):
     page=page.replace('<div class="details">',section+'<div class="details">')
     page=page.replace("document.querySelectorAll('tbody tr')", "document.querySelectorAll('tr[data-state]')")
     page=page.replace('更新时间：2026-10-30','更新时间：'+d['updated'])
+# Evaluation metrics stay separate from migration self-reports. Missing is not zero.
+def metric_value(metrics, key):
+    value = metrics.get(key)
+    if value is None:
+        return '待发布'
+    if isinstance(value, bool) or not isinstance(value, (int, float)) or not math.isfinite(value) or value < 0:
+        raise ValueError(f'Invalid metric {key}: {value!r}')
+    if key.endswith('_score'):
+        if value > 100:
+            raise ValueError(f'{key} must be between 0 and 100')
+        return f'{value:g} / 100'
+    if not isinstance(value, int):
+        raise ValueError(f'{key} must be an integer')
+    if key == 'total_tokens':
+        return f'{value:,}'
+    hours, remainder = divmod(value, 3600)
+    minutes, seconds = divmod(remainder, 60)
+    return f'{hours}小时 {minutes}分 {seconds}秒' if hours else f'{minutes}分 {seconds}秒'
+
+metric_keys = ('functional_score', 'ui_score', 'total_tokens', 'duration_seconds')
+result_rows, result_md = [], []
+for record in d['experiments'] + d.get('retests', []):
+    values = [metric_value(record.get('metrics', {}), key) for key in metric_keys]
+    model = record['model_family'] + ' / ' + record['model_id']
+    harness = record['harness'] + ' ' + record['harness_version']
+    run = record['run_id']
+    metric_note = record.get('metrics_note') or '尚无可核实的指标记录。'
+    result_rows.append('<tr><td><strong>'+e(model)+'</strong><small>'+e(harness)+'</small></td><td><code>'+e(run)+'</code></td>'+''.join('<td class="result-value'+(' muted' if value == '待发布' else '')+'">'+e(value)+'</td>' for value in values)+'<td class="notes">'+e(metric_note)+'</td></tr>')
+    # Escape table delimiters even when model names contain Markdown characters.
+    result_md.append('| '+' | '.join(str(value).replace('|', '&#124;').replace('\n', ' ') for value in [model, harness, run, *values, metric_note])+' |')
+results_note = '功能分与 UI 分均为 0–100 分；Token 数为该次迁移运行消耗的总 Token（按对应 Harness 的统计口径），耗时为迁移任务从开始到结束的墙钟时间。未发布指标显示“待发布”，不记为 0；原始实验与补测按运行 ID 分别记录。Token 含缓存，不等于计费 Token；不同 Harness 的口径见各行。功能分含历史原始通过的行另行标注，不能直接排名。'
+results_section = '<section id="migration-results" style="margin:32px 0"><h2>迁移测评结果</h2><p class="intro">'+e(results_note)+'</p><p><a href="../data/metrics-evidence.json">指标来源与安装包校验记录</a></p><div class="table-wrap"><table><caption hidden>迁移测评结果：功能分、UI 分、Token 数与迁移耗时</caption><thead><tr><th>模型 / HARNESS</th><th>运行 ID</th><th>功能分</th><th>UI 分</th><th>TOKEN 数</th><th>迁移耗时</th><th>评分与统计说明</th></tr></thead><tbody>'+''.join(result_rows)+'</tbody></table></div></section>'
+page = page.replace('<div class="toolbar">', results_section+'<h2>迁移实验进度</h2><div class="toolbar">', 1)
+page = page.replace("document.querySelectorAll('tbody tr')", "document.querySelectorAll('tr[data-state]')")
+page = page.replace('.number{', '.result-value{white-space:nowrap;font-variant-numeric:tabular-nums}.number{')
+progress_index = md.index('| 模型 / ID | Harness | 迁移状态 | 独立验收 | 结果镜像（本地 Tart） | 进度备注 |')
+md[progress_index:progress_index] = ['## 迁移测评结果', '', results_note, '', '[指标来源与安装包校验记录](../data/metrics-evidence.json)', '', '| 模型 / ID | Harness | 运行 ID | 功能分 | UI 分 | Token 数 | 迁移耗时 | 评分与统计说明 |', '|---|---|---|---|---|---|---|---|', *result_md, '', '## 迁移实验进度', '']
 (root/'experiments/cofi-android-harmony.html').write_text(page)
 md += ['', '## 实验口径与待锁定项', '', '- 固定源码：`'+d['source_commit']+'`。每组独立 Tart，8 CPU / 8 GiB，图形化和可见 Terminal。', '- Codex 使用 gpt-6-astra + ChatGPT 登录；实际默认 reasoning effort 为 medium，按用户要求显式设置 high。DeepSeek / GLM 限北京时间 20:00–08:00 启动，最多两台 Tart 并行。', '- 六组历史完成记录已确认复用。历史 Claude Code 为 2.1.267，基础镜像与 prompt 存在差异，不能宣称完全等条件对照。', '- DeepSeek Pro 采用 10/28 重测；10/27 对旧版的测试不混入。其他历史测试存在定位/观测阻塞，不展示为有效综合分。', '- 镜像栏为已核实存在的本地 Tart 克隆名称；远程下载地址尚未提供。发布结果镜像前需去除凭据。本页未上传磁盘或原始日志。', '- OpenCode + GLM、Codex + GLM、DSH + GLM 和双账号实验不计入本矩阵。', '', '[结构化数据](../data/cofi-android-harmony.json) · [HTML 页面](cofi-android-harmony.html)', '']
 (root/'experiments/cofi-android-harmony.md').write_text('\n'.join(md))
