@@ -42,6 +42,8 @@
 | GLM / glm-5.3 | DevEco Code 0.2.3 / CLI 1.3.4 | cofi-glm-deveco-v2-20261106 | 待发布 | 待发布 | 待发布 | 待发布 | 未独立验收；指标尚未核算。 |
 | GLM / glm-5.3 | OpenCode 1.18.23 | cofi-glm-opencode-v2-20261106 | 待发布 | 待发布 | 待发布 | 待发布 | 未独立验收；指标未核算。 |
 | GLM / glm-5.3 | Claude Code 2.1.312 | cofi-glm-claude-v2-20261106 | 待发布 | 待发布 | 待发布 | 待发布 | 未独立验收，指标未核算。 |
+| GLM / glm-5.3 | Claude Code 2.1.312 | simple-calendar-glm-claude-v2-20261106 | 待发布 | 待发布 | 待发布 | 待发布 | 未独立验收，指标未核算。 |
+| GLM / glm-5.3 | DevEco Code 0.2.3 | simple-calendar-glm-deveco-v2-20261106 | 待发布 | 待发布 | 待发布 | 待发布 | 未独立验收，指标未核算。 |
 
 ## 迁移实验进度
 
@@ -82,6 +84,8 @@
 | GLM / glm-5.3 | 迁移自报完成；未独立验收 | `mobile-harness-deveco-v2-20261103` | 18组GLM×Harness×App批次；Cofi，高保真v2，API认证。全会话至少15分钟静默确认，833文件及内部相对链接SHA核验；手机10210、relay18810及Tart已停止。自报构建/安装/启动成功；保留PiP/Wear/后台通知缺项、动态主题未实现及关闭按钮替代滑动关闭；verify_ui不可用。非独立验收。 |
 | GLM / glm-5.3 | 迁移自报完成；未独立验收 | `mobile-harness-opencode-v1-20261028` | GLM三应用三Harness批次；Cofi高保真v2/API。全会话至少15分钟静默复核，879文件及内部相对链接SHA归档核验；手机10220/relay18820/Tart已停止。自报构建安装首页稳定；模型无图像输入，按PNG解码推断首页，未验证深层流程。缺项PiP/WearOS/动态配色/FAB形变/后台服务。原生todo未更新（0/15），保留整体自报及偏差；非独立验收。 |
 | GLM / glm-5.3 | 迁移自报完成；未独立验收 | `mobile-harness-claude-v1-20261028` | GLM三应用三Harness批次，Cofi高保真v2/API。全会话至少15分钟静默确认，785文件及内部相对链接/native日志SHA归档；手机10200/relay18800/Tart全停。自报生产全量构建及最终安装启动、55ets/16截图。曾以临时路由和调试覆盖层触发流程，最终移除；无真实点按实操证据，HAP未签名，完整限制保留于README。非独立验收。 |
+| GLM / glm-5.3 | 迁移自报完成；未独立验收 | `mobile-harness-claude-v1-20261028` | Simple-Calendar / GLM5.3 / 高保真v2。全会话>=15分钟静默核验，1414文件及内部链接/原生日志SHA安全归档；专属手机/relay/Tart已停，磁盘保留。自报96 ArkTS/8截图，临时更改编译默认值进行画面验证后还原；无真实点击流程证据，96文件映射与平台缺失保留README。非独立验收。 |
+| GLM / glm-5.3 | 迁移自报完成；未独立验收 | `mobile-harness-deveco-v2-20261103` | Simple-Calendar / GLM5.3 / 高保真v2。全会话>=15分钟静默核验，1285文件及内部链接/原生日志SHA安全归档；专属手机/relay/Tart已停，磁盘保留。自报构建成功但未做设备运行验证，称无物理设备且模拟器下载受限；本轮专属device-control预检已通过。陈旧todo仍0/13完成，实际全会话无未结束操作。非独立验收。 |
 
 ## 实验口径与待锁定项
 
