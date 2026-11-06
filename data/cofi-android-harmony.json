@@ -1007,6 +1007,35 @@
       },
       "metrics_note": "未独立验收，指标未核算。",
       "app": "Omni-Notes"
+    },
+    {
+      "id": "omni-notes-glm-claude-v2-20261106",
+      "run_id": "omni-notes-glm-claude-v2-20261106",
+      "model_family": "GLM",
+      "model_id": "glm-5.3",
+      "harness": "Claude Code",
+      "harness_version": "2.1.312",
+      "migration": "迁移自报完成",
+      "evaluation": "未独立验收",
+      "base_image": "mobile-harness-claude-v1-20261028",
+      "result_image": "omni-notes-glm-claude-v2-20261106",
+      "image_url": null,
+      "image_status": "仅本地磁盘保留",
+      "evidence": "omni-notes-glm-claude-v2-20261106",
+      "notes": "Omni-Notes / GLM5.3 / 高保真v2。整体自报后全部会话>=15分钟静默及无未结束操作核验；1700文件/内部相对链接/原生日志SHA安全归档，凭据排除，专属手机10260/relay18860/Tart全停，磁盘保留。自报103ets、最终unsignedHAP安装启动主界面，临时探针构建验证preferences跨冷启动持久化后已移除；无真实tap深层流程或Android对照。保留AES ECB改CBC导致密文格式变化等限制与流程偏差，非独立验收。",
+      "schedule_window": "本批立即启动已授权",
+      "started_at": "2026-11-06T14:57:08.172Z",
+      "resources_stopped": true,
+      "prompt_version": "v2",
+      "archive_sha256": "a13e4d9bc125274c8e4869ca66a9192bfd7fc5c1437c8ba7e780e3ff84359180",
+      "metrics": {
+        "functional_score": null,
+        "ui_score": null,
+        "total_tokens": null,
+        "duration_seconds": null
+      },
+      "metrics_note": "未独立验收，指标未核算。",
+      "app": "Omni-Notes"
     }
   ]
 }
