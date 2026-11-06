@@ -949,6 +949,35 @@
       },
       "metrics_note": "未独立验收，指标未核算。",
       "app": "Simple-Calendar"
+    },
+    {
+      "id": "omni-notes-glm-deveco-v2-20261106",
+      "run_id": "omni-notes-glm-deveco-v2-20261106",
+      "model_family": "GLM",
+      "model_id": "glm-5.3",
+      "harness": "DevEco Code",
+      "harness_version": "0.2.3",
+      "migration": "迁移自报完成",
+      "evaluation": "未独立验收",
+      "base_image": "mobile-harness-deveco-v2-20261103",
+      "result_image": "omni-notes-glm-deveco-v2-20261106",
+      "image_url": null,
+      "image_status": "仅本地磁盘保留",
+      "evidence": "omni-notes-glm-deveco-v2-20261106",
+      "notes": "Omni-Notes / GLM5.3 / 高保真v2。整体自报后全部5会话>=15分钟静默核验，无未结束操作；1552文件/内部相对链接/原生日志SHA安全归档，专属手机10270/relay18870/Tart全停，磁盘保留。自报构建成功；称无USB设备/镜像区域限制，未设备运行验证，本轮device-control通道预检已通过。保留限制和流程偏差，非独立验收。",
+      "schedule_window": "本批立即启动已授权",
+      "started_at": "2026-11-06T13:16:39.860000+00:00",
+      "resources_stopped": true,
+      "prompt_version": "v2",
+      "archive_sha256": "26b193e466e69e259d2617369878a53acb5c971fa9c6366d0261a84d936c1db0",
+      "metrics": {
+        "functional_score": null,
+        "ui_score": null,
+        "total_tokens": null,
+        "duration_seconds": null
+      },
+      "metrics_note": "未独立验收，指标未核算。",
+      "app": "Omni-Notes"
     }
   ]
 }
