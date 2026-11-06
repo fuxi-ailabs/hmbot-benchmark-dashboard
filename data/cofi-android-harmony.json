@@ -775,7 +775,8 @@
       "round_index": 0,
       "hap_sha256": "05c7cc4593ddbf056361eecdd5c42eca17c5c93f1d7296cf81c01c238ec81819",
       "benchmark_commit": "6963291214b1ae2b856d7737a39fd251cf7ee749",
-      "resources_stopped": true
+      "resources_stopped": true,
+      "started_at": "2026-10-26T08:37:11.632764Z（历史迁移）"
     }
   ]
 }
