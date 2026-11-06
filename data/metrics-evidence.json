@@ -713,5 +713,137 @@
       }
     ],
     "limitations": "90 gate-blocked cases included in denominator. UI and functional metrics use fixed benchmark. Some gold assertions establish reachability only. Raw failures remain separately classified; no App or gold modifications."
+  },
+  "cofi-dw-20261105": {
+    "run_id": "cofi-dw-20261105",
+    "test_run_id": "cofi-dw-20261106",
+    "updated": "2026-11-06T10:38:48+08:00",
+    "score_source": {
+      "path": "benchmark-runs/cofi-dw-20261106/summary.json",
+      "sha256": "ebb9bd6669494d7c17451e2925ef1bd21403f805c9fc657cceb27ce73f8784e7"
+    },
+    "hap_sha256": "135d4bbb3c86fb33c04833a12d75afa6106c93bf79b276fd4aa30e3feff03b4f",
+    "benchmark_commit": "6963291214b1ae2b856d7737a39fd251cf7ee749",
+    "functional": {
+      "passed": 209,
+      "total": 335,
+      "failed": 38,
+      "blocked": 88,
+      "executed": 247,
+      "basis": "Last valid formal result by case ID; unaffected results retained; diagnostic runs excluded; blocked retained in denominator.",
+      "remaining_causes": {
+        "application": 10,
+        "prerequisite": 109,
+        "method_gap": 7
+      }
+    },
+    "rounds": [
+      {
+        "phase": "round1",
+        "executed": 214,
+        "passed": 176,
+        "failed": 38
+      },
+      {
+        "phase": "round2",
+        "executed": 79,
+        "passed": 77,
+        "failed": 2
+      }
+    ],
+    "round2_trigger": {
+      "confirmed_binding_cases": 20,
+      "all_cases": 335,
+      "ratio": 0.05970149253731343,
+      "threshold": 0.05,
+      "operator": ">"
+    },
+    "ui": {
+      "source": {
+        "path": "benchmark-runs/cofi-dw-20261106/ui-scores/dw.json",
+        "sha256": "91c344aaa1ccb262ac5455ae0cc3a7f7fbb0e229ec53a09365c7d170e657dd5e"
+      },
+      "score": 78.7,
+      "pages": 3,
+      "source_record_date": "2026-11-06",
+      "method": "Frozen benchmark ui-textbox; English system and App; same HAP; DINO enabled",
+      "dino_model": "facebook/dinov2-base",
+      "per_page": {
+        "page_0001_launch": 87.2,
+        "page_0002_recipe_details": 87.5,
+        "page_0003_recipe_edit": 61.5
+      }
+    },
+    "environment": {
+      "system_language": "English",
+      "app_language": "English",
+      "region": "China",
+      "device_concurrency": 1,
+      "test_devices_closed": true
+    },
+    "usage": {
+      "total_tokens": null,
+      "duration_seconds": null,
+      "definition": "Migration usage not analyzed in this evaluation; testing duration is not substituted for migration time."
+    },
+    "sources": [
+      {
+        "path": "benchmark-runs/cofi-dw-20261106/merged-tests.json",
+        "sha256": "90e31121264ce88123b4772e9914c0b3be45efaad01d88472d222fecf65e35a5"
+      },
+      {
+        "path": "benchmark-runs/cofi-dw-20261106/result-origins.json",
+        "sha256": "8b8658707984bacee0ed2a3928110f81e7e0df3dd1b5a88683ab63a05a3a4044"
+      },
+      {
+        "path": "benchmark-runs/cofi-dw-20261106/case-analysis.json",
+        "sha256": "0bb46bd3f4296cad978624643ee56eb5a5ba1d267929a5b846be7e281743ec5d"
+      },
+      {
+        "path": "benchmark-runs/cofi-dw-20261106/round2-decision.json",
+        "sha256": "c773d8fd0807f6dab97312403485ad37e2d3ca1d04290d41efdada6ec637955f"
+      },
+      {
+        "path": "benchmark-runs/cofi-dw-20261106/round2-selection.json",
+        "sha256": "59eda8a657727958df3ba044a36cd8c9551abbe68ec9f89ecbe826b0c643b615"
+      },
+      {
+        "path": "benchmark-runs/cofi-dw-20261106/round1/tests.json",
+        "sha256": "27bd747c998350ddfec35d4fef5c2024915d6498e51cc615c68ebe067e5f014c"
+      },
+      {
+        "path": "benchmark-runs/cofi-dw-20261106/round1/gate-report.json",
+        "sha256": "cb15b8d6551e25088736ed62a4d743f54a323606479f4ef9ea64f7c4d3189197"
+      },
+      {
+        "path": "benchmark-runs/cofi-dw-20261106/round2/tests.json",
+        "sha256": "d1911d7850df5f114bcd91edf83c62637eba8b2d0cc28a6912a6d0e7a0bba518"
+      },
+      {
+        "path": "benchmark-runs/cofi-dw-20261106/round2/gate-report.json",
+        "sha256": "29ba0e71f6574de579323d0e0d1cc82a1d61b01cd668ec0cead29d1c456aafff"
+      },
+      {
+        "path": "benchmark-runs/cofi-dw-20261106/final-verification.json",
+        "sha256": "c334502310695fea4960ce443e58bebeaea29b4dd716ddb452c54785e4437f48"
+      },
+      {
+        "path": "benchmark-runs/cofi-dw-20261106/cleanup.json",
+        "sha256": "45f8f977e8025b7cf693241cf24a8335ef7a1e961d509e9bc74974d487fbd598"
+      },
+      {
+        "path": "benchmark-runs/cofi-dw-20261106/functional-environment.json",
+        "sha256": "876c51d5362de134f7ac0f4ca418c5160d7f8cb0e91cb318fdd489d92293a3c3"
+      },
+      {
+        "path": "benchmark-runs/cofi-dw-20261106/ui-environment.json",
+        "sha256": "2893314f299a5f76989a7416bd6467e9f4690b3bfb4eb30a513c948a640c9bff"
+      },
+      {
+        "path": "benchmark-runs/cofi-dw-20261106/findings.json",
+        "sha256": "da7be99165ab806cbd2b9923cc7ff0f6b416a0261c278fb0150e5b0cb6072086"
+      }
+    ],
+    "limitations": "Gate-blocked cases remain in the full denominator. Standard assertions sometimes prove UI reachability only. No App or gold changes; no diagnostic extra actions or relaunches counted as passes. Raw evidence retained locally."
   }
 }

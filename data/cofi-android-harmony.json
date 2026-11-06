@@ -1,6 +1,6 @@
 {
   "title": "阶段1-所有model harness组合的A2H实验",
-  "updated": "2026-11-06T05:14:45+08:00",
+  "updated": "2026-11-06T10:38:48+08:00",
   "timezone": "Asia/Shanghai",
   "scope": "5 models × 2 harnesses + Codex/GPT",
   "source_commit": "e3212d7090b0dd3d81ec5a31cb0b0641f68c865a",
@@ -547,7 +547,7 @@
       "cli_version": "1.3.4",
       "auth_method": "Huawei OAuth",
       "migration": "自报完成",
-      "evaluation": "未独立验收",
+      "evaluation": "已独立测试（仍有失败或受阻）",
       "base_image": "mobile-harness-dw-v1-20261105",
       "result_image": null,
       "image_url": null,
@@ -563,12 +563,14 @@
       "resources_stopped": true,
       "schedule_window": "用户选择内置通道，本次立即启动",
       "metrics": {
-        "functional_score": null,
-        "ui_score": null,
+        "functional_score": 62.4,
+        "ui_score": 78.7,
         "total_tokens": null,
         "duration_seconds": null
       },
-      "metrics_note": ""
+      "metrics_note": "2026-11-06 英文环境独立测试；功能 209/335（62.4%），执行失败 38 条、门禁受阻 88 条，分母保留全部用例。首轮确认 binding/动作适配影响 20/335（5.97%），触发第二轮；按用例 ID 合并最后一次有效结果，诊断不计分。UI 78.7%，同一安装包三页。主要差异为新建步骤入口、单独保存步骤、部分设置及保存后详情刷新；方法缺口与应用问题分开记录。迁移 token 与迁移耗时未核实，保持空值。",
+      "evaluation_run_id": "cofi-dw-20261106",
+      "hap_sha256": "135d4bbb3c86fb33c04833a12d75afa6106c93bf79b276fd4aa30e3feff03b4f"
     },
     {
       "id": "cofi-skillopt-r0-20261105",
