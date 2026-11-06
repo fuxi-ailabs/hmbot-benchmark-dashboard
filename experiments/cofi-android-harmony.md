@@ -38,6 +38,7 @@
 | DeepSeek Flash / deepseek-flash | Claude Code 2.1.312 | cofi-skillopt-r2-20261105 | 37.3 / 100 | 82.8 / 100 | 待发布 | 25分 30秒 | 125/335（37.3%）；实际执行174条、49失败，161受阻计入完整分母。47条失败受既有配方编辑入口崩溃阻断；另有图标面板被键盘遮挡及计时开始前预览错误显示。UI三页80.2/82.8/85.4，系统英语。固定gold部分断言只覆盖可达性；不扩展为全部业务正确。迁移墙钟1530秒；token未知。 |
 | DeepSeek Flash / deepseek-flash | Claude Code 2.1.312 | cofi-skillopt-r3-20261105 | 69.6 / 100 | 89.1 / 100 | 待发布 | 38分 20秒 | 233/335（69.6%）；实际执行245条、12失败，90受阻计入完整分母。formal-02复测全部45条可执行受影响原用例，最后有效phase覆盖对应ID。UI三页83.8/88.9/94.7，系统英语。固定gold部分断言只覆盖可达性；不扩展为全部业务正确。迁移墙钟2300秒；token未知。 |
 | DeepSeek Flash / deepseek-flash | DevEco Code 0.2.3 | cofi-flash-v2-glm-operator-20261106 | 待发布 | 待发布 | 待发布 | 待发布 | 本轮仅收集迁移自报及已有产物，未执行独立验收。 |
+| DeepSeek Flash / deepseek-flash | Claude Code 2.1.267 | cofi-skillopt-paired-r0-20261106 | 57.9 / 100 | 84.1 / 100 | 待发布 | 4小时 2分 26秒 | 本次194/335（57.9%），205有效执行、11失败、130门禁受阻。手机中途退出的117条设施错误已用同配置一次续跑结果覆盖，原始证据保留；不是App失败。确认绑定问题2/335未达5%复测门槛。英语UI三页77.1/83.5/91.8。耗时为历史迁移进程墙钟，非本次测试；token未知。 |
 
 ## 迁移实验进度
 
@@ -74,6 +75,7 @@
 | DeepSeek Flash / deepseek-flash | 已归档，独立评测完成；125/335 通过；49失败、161受阻；UI 3/3页 | `mobile-harness-claude-v1-20261028` | FlashRSI SkillOpt 第2个候选。仅skill由真实Flash Worker根据上一轮train反馈修改；全新基础VM、原始Android源码和固定prompt，Claude Code+Flash自主迁移。候选是否被dev接受由上游算法决定。 |
 | DeepSeek Flash / deepseek-flash | 已归档，独立评测完成；233/335 通过；12失败、90受阻；UI 3/3页 | `mobile-harness-claude-v1-20261028` | FlashRSI SkillOpt 第3个候选，父版本为已接受的r1。真实Flash Worker提出skill补丁；全新基础VM、原始Android源码和固定prompt自主迁移。四次迁移已完成，独立评测使用最后有效phase。 |
 | DeepSeek Flash / deepseek-flash | 自报完成，已归档；未独立验收 | `mobile-harness-deveco-v2-20261103` | 本机 GLM-5.3 + Claude Code 2.1.312 执行者试运行：负责独立准备、预检及反馈修正；监督方补足可见 GUI 启动、单次任务提交、原生核验、周期监控及归档清理，非执行者完全自主完成。原始355文件，8CPU/8GiB，高保真v2 prompt；首条用户消息1条，正文一致但末尾LF转空格。agent自报构建、安装、启动及14张截图，交付ArkTS工程和HAP；PiP、动态取色、WearOS、深链/动态快捷方式未迁移，波浪计时为近似实现，未申请长时后台任务权限，未逐按钮设备回归。上述功能与验证均为自报。全会话至少15分钟静默复核通过，805普通文件及4内部相对链接、原生日志已归档并校验SHA。收尾时专属手机已无进程/监听，监督方停止relay和Tart，全部退出核验通过；磁盘和登录保留。 |
+| DeepSeek Flash / deepseek-flash | 历史完成产物重新独立评测；194/335通过；11失败、130受阻；UI 3/3页 | `mobile-dev-base-v2-20261026` | 双复现三轮SkillOpt实验基线：指定历史同包重新验证，未重跑历史迁移，未执行新提炼seed。后续每轮同一候选独立迁移两次取均值；历史基线只有一份。 |
 
 ## 实验口径与待锁定项
 
