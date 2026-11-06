@@ -777,6 +777,35 @@
       "benchmark_commit": "6963291214b1ae2b856d7737a39fd251cf7ee749",
       "resources_stopped": true,
       "started_at": "2026-10-26T08:37:11.632764Z（历史迁移）"
+    },
+    {
+      "id": "cofi-glm-deveco-v2-20261106",
+      "run_id": "cofi-glm-deveco-v2-20261106",
+      "model_family": "GLM",
+      "model_id": "glm-5.3",
+      "harness": "DevEco Code",
+      "harness_version": "0.2.3 / CLI 1.3.4",
+      "migration": "迁移自报完成",
+      "evaluation": "未独立验收",
+      "base_image": "mobile-harness-deveco-v2-20261103",
+      "result_image": "cofi-glm-deveco-v2-20261106",
+      "image_url": null,
+      "image_status": "仅本地磁盘保留",
+      "evidence": "cofi-glm-deveco-v2-20261106",
+      "notes": "18组GLM×Harness×App批次；Cofi，高保真v2，API认证。全会话至少15分钟静默确认，833文件及内部相对链接SHA核验；手机10210、relay18810及Tart已停止。自报构建/安装/启动成功；保留PiP/Wear/后台通知缺项、动态主题未实现及关闭按钮替代滑动关闭；verify_ui不可用。非独立验收。",
+      "schedule_window": "本批立即启动已授权",
+      "reused": false,
+      "resources_stopped": true,
+      "prompt_version": "v2",
+      "archive_sha256": "325d25ef14673c2821487176bd076e20be5fc334011aaf482c2e64bb7c9b8a3d",
+      "metrics": {
+        "functional_score": null,
+        "ui_score": null,
+        "total_tokens": null,
+        "duration_seconds": null
+      },
+      "metrics_note": "未独立验收；指标尚未核算。",
+      "started_at": "2026-11-06T04:08:18.837Z"
     }
   ]
 }
