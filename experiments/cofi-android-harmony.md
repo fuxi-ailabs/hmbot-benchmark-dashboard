@@ -46,6 +46,7 @@
 | GLM / glm-5.3 | DevEco Code 0.2.3 | simple-calendar-glm-deveco-v2-20261106 | 待发布 | 待发布 | 待发布 | 待发布 | 未独立验收，指标未核算。 |
 | GLM / glm-5.3 | OpenCode 1.18.23 | simple-calendar-glm-opencode-v2-20261106 | 待发布 | 待发布 | 待发布 | 待发布 | 未独立验收，指标未核算。 |
 | GLM / glm-5.3 | DevEco Code 0.2.3 | omni-notes-glm-deveco-v2-20261106 | 待发布 | 待发布 | 待发布 | 待发布 | 未独立验收，指标未核算。 |
+| GLM / glm-5.3 | OpenCode 1.18.23 | omni-notes-glm-opencode-v2-20261106 | 待发布 | 待发布 | 待发布 | 待发布 | 未独立验收，指标未核算。 |
 
 ## 迁移实验进度
 
@@ -90,6 +91,7 @@
 | GLM / glm-5.3 | 迁移自报完成；未独立验收 | `mobile-harness-deveco-v2-20261103` | Simple-Calendar / GLM5.3 / 高保真v2。全会话>=15分钟静默核验，1285文件及内部链接/原生日志SHA安全归档；专属手机/relay/Tart已停，磁盘保留。自报构建成功但未做设备运行验证，称无物理设备且模拟器下载受限；本轮专属device-control预检已通过。陈旧todo仍0/13完成，实际全会话无未结束操作。非独立验收。 |
 | GLM / glm-5.3 | 迁移自报完成；未独立验收 | `mobile-harness-opencode-v1-20261028` | Simple-Calendar / GLM5.3 / 高保真v2。整体自报后全会话>=15分钟静默核验，1223文件及内部链接/原生日志SHA归档；专属手机10250/relay18850/Tart已停，磁盘保留。自报构建成功、安装启动、画面稳定；direct HDC tunnel offline，交互流程未真实点击验证，限制保留README。非独立验收。 |
 | GLM / glm-5.3 | 迁移自报完成；未独立验收 | `mobile-harness-deveco-v2-20261103` | Omni-Notes / GLM5.3 / 高保真v2。整体自报后全部5会话>=15分钟静默核验，无未结束操作；1552文件/内部相对链接/原生日志SHA安全归档，专属手机10270/relay18870/Tart全停，磁盘保留。自报构建成功；称无USB设备/镜像区域限制，未设备运行验证，本轮device-control通道预检已通过。保留限制和流程偏差，非独立验收。 |
+| GLM / glm-5.3 | 迁移自报完成；未独立验收 | `mobile-harness-opencode-v1-20261028` | Omni-Notes / GLM5.3 / 高保真v2。整体自报后全部会话>=15分钟静默核验，无未结束操作；1437文件/内部相对链接/原生日志SHA安全归档，签名凭据文件排除。专属手机10280/relay18880/Tart全停，磁盘保留。自报构建、自签名安装、启动主列表稳定；曾用分阶段构建与OCR排查启动崩溃，无模型图像输入及tap/input通道，深层交互未实际操作验证。保留陈旧todo与流程偏差，非独立验收。 |
 
 ## 实验口径与待锁定项
 

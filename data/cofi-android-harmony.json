@@ -978,6 +978,35 @@
       },
       "metrics_note": "未独立验收，指标未核算。",
       "app": "Omni-Notes"
+    },
+    {
+      "id": "omni-notes-glm-opencode-v2-20261106",
+      "run_id": "omni-notes-glm-opencode-v2-20261106",
+      "model_family": "GLM",
+      "model_id": "glm-5.3",
+      "harness": "OpenCode",
+      "harness_version": "1.18.23",
+      "migration": "迁移自报完成",
+      "evaluation": "未独立验收",
+      "base_image": "mobile-harness-opencode-v1-20261028",
+      "result_image": "omni-notes-glm-opencode-v2-20261106",
+      "image_url": null,
+      "image_status": "仅本地磁盘保留",
+      "evidence": "omni-notes-glm-opencode-v2-20261106",
+      "notes": "Omni-Notes / GLM5.3 / 高保真v2。整体自报后全部会话>=15分钟静默核验，无未结束操作；1437文件/内部相对链接/原生日志SHA安全归档，签名凭据文件排除。专属手机10280/relay18880/Tart全停，磁盘保留。自报构建、自签名安装、启动主列表稳定；曾用分阶段构建与OCR排查启动崩溃，无模型图像输入及tap/input通道，深层交互未实际操作验证。保留陈旧todo与流程偏差，非独立验收。",
+      "schedule_window": "本批立即启动已授权",
+      "started_at": "2026-11-06T15:05:23.230000+00:00",
+      "resources_stopped": true,
+      "prompt_version": "v2",
+      "archive_sha256": "6ac7dc545d37d34d8d2bb8517fca171de481438b1517c2aa6622935fcc99a616",
+      "metrics": {
+        "functional_score": null,
+        "ui_score": null,
+        "total_tokens": null,
+        "duration_seconds": null
+      },
+      "metrics_note": "未独立验收，指标未核算。",
+      "app": "Omni-Notes"
     }
   ]
 }
