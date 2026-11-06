@@ -845,5 +845,70 @@
       }
     ],
     "limitations": "Gate-blocked cases remain in the full denominator. Standard assertions sometimes prove UI reachability only. No App or gold changes; no diagnostic extra actions or relaunches counted as passes. Raw evidence retained locally."
+  },
+  "cofi-skillopt-paired-r0-20261106": {
+    "run_id": "cofi-skillopt-paired-r0-20261106",
+    "historical_run_id": "cofi-harmony-deepseek-20261026",
+    "updated": "2026-11-06T11:31:05+08:00",
+    "hap_sha256": "05c7cc4593ddbf056361eecdd5c42eca17c5c93f1d7296cf81c01c238ec81819",
+    "benchmark_commit": "6963291214b1ae2b856d7737a39fd251cf7ee749",
+    "score_source": {
+      "path": "benchmark-runs/cofi-skillopt-paired-r0-20261106/summary.json",
+      "sha256": "d73e92ba15adf01674cc25f7e23987db78827648f4d023fb933e72ab989ab00e"
+    },
+    "functional": {
+      "passed": 194,
+      "total": 335,
+      "failed": 11,
+      "blocked": 130,
+      "executed": 205,
+      "basis": "Last valid per-ID outcomes after one unchanged-input infrastructure continuation; no binding repair round."
+    },
+    "ui": {
+      "source": {
+        "path": "benchmark-runs/cofi-skillopt-paired-r0-20261106/ui-scores/paired-r0.json",
+        "sha256": "f5d35b829aada6137ab980a61b4e24f33d84b575722b576740c9e16daa3555bc"
+      },
+      "score": 84.1,
+      "pages": 3,
+      "source_record_date": "2026-11-06",
+      "method": "Frozen ui-textbox runner, current same-HAP screenshots in verified English environment"
+    },
+    "usage": {
+      "total_tokens": null,
+      "duration_seconds": 14546,
+      "definition": "Historical migration launcher wall-clock start-to-process-exit; not active API time; excludes current reevaluation. Historical artifact did not execute extracted seed."
+    },
+    "sources": [
+      {
+        "path": "benchmark-runs/cofi-skillopt-paired-r0-20261106/merged-tests.json",
+        "sha256": "0af24f8e0907a04cff082af79a9eb38a0e729559244a700678308fd862524ac2"
+      },
+      {
+        "path": "benchmark-runs/cofi-skillopt-paired-r0-20261106/result-origins.json",
+        "sha256": "78c63050afbd0c1e0d0c337f4c563617d181a2e87037cc10469e25522283c4fc"
+      },
+      {
+        "path": "benchmark-runs/cofi-skillopt-paired-r0-20261106/gate-report.json",
+        "sha256": "d4c70ee6543cd05c0b07d9e84b1e4284b1588ae2ed80f1f7434ef857f8fcf146"
+      },
+      {
+        "path": "benchmark-runs/cofi-skillopt-paired-r0-20261106/cleanup.json",
+        "sha256": "c0bf0a2a4c79834b7462f3718951da4880f4976b329a49ee928a7dbf801c0c9e"
+      },
+      {
+        "path": "benchmark-runs/cofi-skillopt-paired-r0-20261106/final-failure-analysis.json",
+        "sha256": "8868f20dbc68b351e7542ef68edd5bceeb940664799b30828669b48c3d44c4de"
+      },
+      {
+        "path": "benchmark-runs/cofi-skillopt-paired-r0-20261106/second-round-decision.json",
+        "sha256": "fbab9bff4c9799aa2266bb222512fb5a1481b14a66f52133364155ab302bcc11"
+      },
+      {
+        "path": "benchmark-runs/cofi-skillopt-paired-r0-20261106/infrastructure-recovery-decision.json",
+        "sha256": "8bc78c9c7be150ecb59fd10d35f8c1cc8f58b89b17b2465f811cdc3703b708b8"
+      }
+    ],
+    "limitations": "130 gate blocked counted as not passed. Two scrolling binding failures remain under default 5% retest threshold; one invalid-name input/Save outcome uncertain. Historical baseline did not execute seed skill. Native failures do not imply independent defects."
   }
 }

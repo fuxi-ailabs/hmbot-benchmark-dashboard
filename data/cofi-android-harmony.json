@@ -1,6 +1,6 @@
 {
   "title": "阶段1-所有model harness组合的A2H实验",
-  "updated": "2026-11-06T10:43:31.999194+08:00",
+  "updated": "2026-11-06T11:31:05+08:00",
   "timezone": "Asia/Shanghai",
   "scope": "5 models × 2 harnesses + Codex/GPT",
   "source_commit": "e3212d7090b0dd3d81ec5a31cb0b0641f68c865a",
@@ -745,6 +745,37 @@
       },
       "metrics_note": "本轮仅收集迁移自报及已有产物，未执行独立验收。",
       "notes": "本机 GLM-5.3 + Claude Code 2.1.312 执行者试运行：负责独立准备、预检及反馈修正；监督方补足可见 GUI 启动、单次任务提交、原生核验、周期监控及归档清理，非执行者完全自主完成。原始355文件，8CPU/8GiB，高保真v2 prompt；首条用户消息1条，正文一致但末尾LF转空格。agent自报构建、安装、启动及14张截图，交付ArkTS工程和HAP；PiP、动态取色、WearOS、深链/动态快捷方式未迁移，波浪计时为近似实现，未申请长时后台任务权限，未逐按钮设备回归。上述功能与验证均为自报。全会话至少15分钟静默复核通过，805普通文件及4内部相对链接、原生日志已归档并校验SHA。收尾时专属手机已无进程/监听，监督方停止relay和Tart，全部退出核验通过；磁盘和登录保留。"
+    },
+    {
+      "id": "cofi-skillopt-paired-r0-20261106",
+      "model_family": "DeepSeek Flash",
+      "model_id": "deepseek-flash",
+      "harness": "Claude Code",
+      "harness_version": "2.1.267",
+      "migration": "历史完成产物重新独立评测",
+      "evaluation": "194/335通过；11失败、130受阻；UI 3/3页",
+      "run_id": "cofi-skillopt-paired-r0-20261106",
+      "base_image": "mobile-dev-base-v2-20261026",
+      "result_image": "cofi-harmony-deepseek-20261026",
+      "image_url": null,
+      "image_status": "本地 Tart 克隆已核实；远程地址待补",
+      "evidence": "cofi-harmony-comparison-20261026",
+      "notes": "双复现三轮SkillOpt实验基线：指定历史同包重新验证，未重跑历史迁移，未执行新提炼seed。后续每轮同一候选独立迁移两次取均值；历史基线只有一份。",
+      "schedule_window": "已授权双复现三轮实验",
+      "reused": true,
+      "metrics": {
+        "functional_score": 57.9,
+        "ui_score": 84.1,
+        "total_tokens": null,
+        "duration_seconds": 14546
+      },
+      "metrics_note": "本次194/335（57.9%），205有效执行、11失败、130门禁受阻。手机中途退出的117条设施错误已用同配置一次续跑结果覆盖，原始证据保留；不是App失败。确认绑定问题2/335未达5%复测门槛。英语UI三页77.1/83.5/91.8。耗时为历史迁移进程墙钟，非本次测试；token未知。",
+      "previous_run": "cofi-harmony-deepseek-20261026",
+      "historical_run_id": "cofi-harmony-deepseek-20261026",
+      "round_index": 0,
+      "hap_sha256": "05c7cc4593ddbf056361eecdd5c42eca17c5c93f1d7296cf81c01c238ec81819",
+      "benchmark_commit": "6963291214b1ae2b856d7737a39fd251cf7ee749",
+      "resources_stopped": true
     }
   ]
 }
