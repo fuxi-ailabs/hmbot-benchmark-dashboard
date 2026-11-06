@@ -834,6 +834,34 @@
         "duration_seconds": null
       },
       "metrics_note": "未独立验收；指标未核算。"
+    },
+    {
+      "id": "cofi-glm-claude-v2-20261106",
+      "run_id": "cofi-glm-claude-v2-20261106",
+      "model_family": "GLM",
+      "model_id": "glm-5.3",
+      "harness": "Claude Code",
+      "harness_version": "2.1.312",
+      "migration": "迁移自报完成",
+      "evaluation": "未独立验收",
+      "base_image": "mobile-harness-claude-v1-20261028",
+      "result_image": "cofi-glm-claude-v2-20261106",
+      "image_url": null,
+      "image_status": "仅本地磁盘保留",
+      "evidence": "cofi-glm-claude-v2-20261106",
+      "notes": "GLM三应用三Harness批次，Cofi高保真v2/API。全会话至少15分钟静默确认，785文件及内部相对链接/native日志SHA归档；手机10200/relay18800/Tart全停。自报生产全量构建及最终安装启动、55ets/16截图。曾以临时路由和调试覆盖层触发流程，最终移除；无真实点按实操证据，HAP未签名，完整限制保留于README。非独立验收。",
+      "schedule_window": "本批立即启动已授权",
+      "started_at": "2026-11-06T04:57:13.822Z",
+      "resources_stopped": true,
+      "prompt_version": "v2",
+      "archive_sha256": "c1c6de523582d37e0cb28ac9923b5fa86621057577cd4106a5014c3dcc2ad74f",
+      "metrics": {
+        "functional_score": null,
+        "ui_score": null,
+        "total_tokens": null,
+        "duration_seconds": null
+      },
+      "metrics_note": "未独立验收，指标未核算。"
     }
   ]
 }
