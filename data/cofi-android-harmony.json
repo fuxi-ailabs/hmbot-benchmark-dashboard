@@ -806,6 +806,34 @@
       },
       "metrics_note": "未独立验收；指标尚未核算。",
       "started_at": "2026-11-06T04:08:18.837Z"
+    },
+    {
+      "id": "cofi-glm-opencode-v2-20261106",
+      "run_id": "cofi-glm-opencode-v2-20261106",
+      "model_family": "GLM",
+      "model_id": "glm-5.3",
+      "harness": "OpenCode",
+      "harness_version": "1.18.23",
+      "migration": "迁移自报完成",
+      "evaluation": "未独立验收",
+      "base_image": "mobile-harness-opencode-v1-20261028",
+      "result_image": "cofi-glm-opencode-v2-20261106",
+      "image_url": null,
+      "image_status": "仅本地磁盘保留",
+      "evidence": "cofi-glm-opencode-v2-20261106",
+      "notes": "GLM三应用三Harness批次；Cofi高保真v2/API。全会话至少15分钟静默复核，879文件及内部相对链接SHA归档核验；手机10220/relay18820/Tart已停止。自报构建安装首页稳定；模型无图像输入，按PNG解码推断首页，未验证深层流程。缺项PiP/WearOS/动态配色/FAB形变/后台服务。原生todo未更新（0/15），保留整体自报及偏差；非独立验收。",
+      "schedule_window": "本批立即启动已授权",
+      "started_at": "2026-11-06T06:02:23.645Z",
+      "resources_stopped": true,
+      "prompt_version": "v2",
+      "archive_sha256": "4a2115ac57d143d7c99949916015711844ff4f87b276259aba880311bb29772d",
+      "metrics": {
+        "functional_score": null,
+        "ui_score": null,
+        "total_tokens": null,
+        "duration_seconds": null
+      },
+      "metrics_note": "未独立验收；指标未核算。"
     }
   ]
 }
