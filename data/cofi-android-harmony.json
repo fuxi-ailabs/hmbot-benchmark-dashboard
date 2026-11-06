@@ -920,6 +920,35 @@
       },
       "metrics_note": "未独立验收，指标未核算。",
       "app": "Simple-Calendar"
+    },
+    {
+      "id": "simple-calendar-glm-opencode-v2-20261106",
+      "run_id": "simple-calendar-glm-opencode-v2-20261106",
+      "model_family": "GLM",
+      "model_id": "glm-5.3",
+      "harness": "OpenCode",
+      "harness_version": "1.18.23",
+      "migration": "迁移自报完成",
+      "evaluation": "未独立验收",
+      "base_image": "mobile-harness-opencode-v1-20261028",
+      "result_image": "simple-calendar-glm-opencode-v2-20261106",
+      "image_url": null,
+      "image_status": "仅本地磁盘保留",
+      "evidence": "simple-calendar-glm-opencode-v2-20261106",
+      "notes": "Simple-Calendar / GLM5.3 / 高保真v2。整体自报后全会话>=15分钟静默核验，1223文件及内部链接/原生日志SHA归档；专属手机10250/relay18850/Tart已停，磁盘保留。自报构建成功、安装启动、画面稳定；direct HDC tunnel offline，交互流程未真实点击验证，限制保留README。非独立验收。",
+      "schedule_window": "本批立即启动已授权",
+      "started_at": "2026-11-06T11:44:16.514000+00:00",
+      "resources_stopped": true,
+      "prompt_version": "v2",
+      "archive_sha256": "f5447e9e3e893bbe016b525a45cb09ce73cfec6897dc7ff9dd310fd766129d33",
+      "metrics": {
+        "functional_score": null,
+        "ui_score": null,
+        "total_tokens": null,
+        "duration_seconds": null
+      },
+      "metrics_note": "未独立验收，指标未核算。",
+      "app": "Simple-Calendar"
     }
   ]
 }
