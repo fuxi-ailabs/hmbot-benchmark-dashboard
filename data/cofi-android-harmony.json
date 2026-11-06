@@ -1,6 +1,6 @@
 {
   "title": "阶段1-所有model harness组合的A2H实验",
-  "updated": "2026-11-06T10:38:48+08:00",
+  "updated": "2026-11-06T10:43:31.999194+08:00",
   "timezone": "Asia/Shanghai",
   "scope": "5 models × 2 harnesses + Codex/GPT",
   "source_commit": "e3212d7090b0dd3d81ec5a31cb0b0641f68c865a",
@@ -711,6 +711,40 @@
       "snapshot_id": "f56d139238395afc4ac0cd60f1b0bc77aa587a0f7bb7c8e68402de301baca4fa",
       "benchmark_commit": "6963291214b1ae2b856d7737a39fd251cf7ee749",
       "schedule_window": "已授权连续SkillOpt实验"
+    },
+    {
+      "id": "cofi-flash-v2-glm-operator-20261106",
+      "run_id": "cofi-flash-v2-glm-operator-20261106",
+      "model_family": "DeepSeek Flash",
+      "model_id": "deepseek-flash",
+      "harness": "DevEco Code",
+      "harness_version": "0.2.3",
+      "cli_version": "1.3.4",
+      "migration": "自报完成，已归档",
+      "evaluation": "未独立验收",
+      "base_image": "mobile-harness-deveco-v2-20261103",
+      "result_image": "cofi-flash-v2-glm-operator-20261106",
+      "image_url": null,
+      "previous_run": "cofi-prompt-v2-flash-20261105",
+      "started_at": "2026-11-06T01:48:41.696095+00:00",
+      "task_started_at": "2026-11-06T01:53:28.248000+00:00",
+      "prompt_version": "v2",
+      "prompt_template_sha256": "144ea78143f2673cd1a6a6bf1b870b8b12abd96bcfc4422022451b1b5dce489c",
+      "prompt_sha256": "466441d4109b7af5c6d0f1e61e1e276ed702386af1603a94ee3a87a34762a655",
+      "source_archive_sha256": "7d408fa9c42f801317e5431795a51973e6f2fa730102a2c68cb5f9c0e7a46728",
+      "preflight": "passed",
+      "resources_stopped": true,
+      "archived_file_count": 805,
+      "archived_symlink_count": 4,
+      "schedule_window": "本次用户授权立即启动",
+      "metrics": {
+        "functional_score": null,
+        "ui_score": null,
+        "total_tokens": null,
+        "duration_seconds": null
+      },
+      "metrics_note": "本轮仅收集迁移自报及已有产物，未执行独立验收。",
+      "notes": "本机 GLM-5.3 + Claude Code 2.1.312 执行者试运行：负责独立准备、预检及反馈修正；监督方补足可见 GUI 启动、单次任务提交、原生核验、周期监控及归档清理，非执行者完全自主完成。原始355文件，8CPU/8GiB，高保真v2 prompt；首条用户消息1条，正文一致但末尾LF转空格。agent自报构建、安装、启动及14张截图，交付ArkTS工程和HAP；PiP、动态取色、WearOS、深链/动态快捷方式未迁移，波浪计时为近似实现，未申请长时后台任务权限，未逐按钮设备回归。上述功能与验证均为自报。全会话至少15分钟静默复核通过，805普通文件及4内部相对链接、原生日志已归档并校验SHA。收尾时专属手机已无进程/监听，监督方停止relay和Tart，全部退出核验通过；磁盘和登录保留。"
     }
   ]
 }
