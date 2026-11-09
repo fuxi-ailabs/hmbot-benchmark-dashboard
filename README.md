@@ -82,3 +82,7 @@ git push origin HEAD:main
 成绩按区间着色并加粗，历史口径、待测评及迁移失败有文字标签；逐行“评分说明与运行记录”中保留原始状态、备注和镜像信息。排序表示查看顺序，不能消除实验口径差异。完整历史内容仍保留在 Markdown 文档中。
 
 生成器现在还使用 `scripts/render_dashboard.py` 生成多 App 页面，共用 `assets/dashboard.css` 与 `assets/dashboard.js`。修改这些文件后也会触发自动更新；工作流写回目录首页及所有 App 页。
+
+## 静态访问密码
+
+网站通过 `login.html` 输入访问密码，密码在 `assets/static-login.js` 中设置。登录状态保存在当前标签页的 sessionStorage，底部可退出；成功后返回原 App 或筛选视图。不包含用户名或访问日志。静态文件和源码仍公开可见，此功能不是服务端访问保护。
