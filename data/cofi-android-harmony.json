@@ -1,6 +1,6 @@
 {
   "title": "阶段1-所有model harness组合的A2H实验",
-  "updated": "2026-11-06T11:31:05+08:00",
+  "updated": "2026-11-09T12:23:11+08:00",
   "timezone": "Asia/Shanghai",
   "scope": "5 models × 2 harnesses + Codex/GPT",
   "source_commit": "e3212d7090b0dd3d81ec5a31cb0b0641f68c865a",
@@ -786,7 +786,7 @@
       "harness": "DevEco Code",
       "harness_version": "0.2.3 / CLI 1.3.4",
       "migration": "迁移自报完成",
-      "evaluation": "未独立验收",
+      "evaluation": "已独立测试（含受阻项）",
       "base_image": "mobile-harness-deveco-v2-20261103",
       "result_image": "cofi-glm-deveco-v2-20261106",
       "image_url": null,
@@ -799,12 +799,12 @@
       "prompt_version": "v2",
       "archive_sha256": "325d25ef14673c2821487176bd076e20be5fc334011aaf482c2e64bb7c9b8a3d",
       "metrics": {
-        "functional_score": null,
-        "ui_score": null,
+        "functional_score": 43.6,
+        "ui_score": 79.4,
         "total_tokens": null,
         "duration_seconds": null
       },
-      "metrics_note": "未独立验收；指标尚未核算。",
+      "metrics_note": "2026-11-09最新标准，English；功能 146/335，失败 4，受阻/跳过 185；UI 79.4%（3页）。应用和标准未修改；只按最后有效执行合并，受阻保留在分母。已完成第二轮binding修复复测；剩余98条仍未确定具体原因。",
       "started_at": "2026-11-06T04:08:18.837Z"
     },
     {
@@ -815,7 +815,7 @@
       "harness": "OpenCode",
       "harness_version": "1.18.23",
       "migration": "迁移自报完成",
-      "evaluation": "未独立验收",
+      "evaluation": "已独立测试（含受阻项）",
       "base_image": "mobile-harness-opencode-v1-20261028",
       "result_image": "cofi-glm-opencode-v2-20261106",
       "image_url": null,
@@ -828,12 +828,12 @@
       "prompt_version": "v2",
       "archive_sha256": "4a2115ac57d143d7c99949916015711844ff4f87b276259aba880311bb29772d",
       "metrics": {
-        "functional_score": null,
+        "functional_score": 3.6,
         "ui_score": null,
         "total_tokens": null,
         "duration_seconds": null
       },
-      "metrics_note": "未独立验收；指标未核算。"
+      "metrics_note": "2026-11-09最新标准，English；功能 12/335，失败 0，受阻/跳过 323；仅首页 UI 80.6%（1/3页），无完整评分。应用和标准未修改；只按最后有效执行合并，受阻保留在分母。设置、新建和详情入口崩溃，导致多数用例受阻。"
     },
     {
       "id": "cofi-glm-claude-v2-20261106",
@@ -843,7 +843,7 @@
       "harness": "Claude Code",
       "harness_version": "2.1.312",
       "migration": "迁移自报完成",
-      "evaluation": "未独立验收",
+      "evaluation": "已独立测试（含受阻项）",
       "base_image": "mobile-harness-claude-v1-20261028",
       "result_image": "cofi-glm-claude-v2-20261106",
       "image_url": null,
@@ -856,12 +856,12 @@
       "prompt_version": "v2",
       "archive_sha256": "c1c6de523582d37e0cb28ac9923b5fa86621057577cd4106a5014c3dcc2ad74f",
       "metrics": {
-        "functional_score": null,
+        "functional_score": 0.0,
         "ui_score": null,
         "total_tokens": null,
         "duration_seconds": null
       },
-      "metrics_note": "未独立验收，指标未核算。"
+      "metrics_note": "2026-11-09最新标准，English；功能 0/335，失败 0，受阻/跳过 335；启动崩溃，UI无法评分。应用和标准未修改；只按最后有效执行合并，受阻保留在分母。"
     },
     {
       "id": "simple-calendar-glm-claude-v2-20261106",
@@ -871,7 +871,7 @@
       "harness": "Claude Code",
       "harness_version": "2.1.312",
       "migration": "迁移自报完成",
-      "evaluation": "未独立验收",
+      "evaluation": "已独立测试（含受阻项）",
       "base_image": "mobile-harness-claude-v1-20261028",
       "result_image": "simple-calendar-glm-claude-v2-20261106",
       "image_url": null,
@@ -884,12 +884,12 @@
       "prompt_version": "v2",
       "archive_sha256": "03ebfa7e0ac39e0a37af40f228651a0f8d83c971c8d4f8794c5b18cb51ccdd5b",
       "metrics": {
-        "functional_score": null,
+        "functional_score": 1.8,
         "ui_score": null,
         "total_tokens": null,
         "duration_seconds": null
       },
-      "metrics_note": "未独立验收，指标未核算。",
+      "metrics_note": "2026-11-09最新标准，English；功能 3/169，失败 1，受阻/跳过 165；暂无该应用的标准UI参考图。应用和标准未修改；只按最后有效执行合并，受阻保留在分母。多数受阻来自标准导航步骤与当前界面不一致；草稿 8 条单列，低通过率不等于全部应用缺陷。",
       "app": "Simple-Calendar"
     },
     {
@@ -900,7 +900,7 @@
       "harness": "DevEco Code",
       "harness_version": "0.2.3",
       "migration": "迁移自报完成",
-      "evaluation": "未独立验收",
+      "evaluation": "已独立测试（含受阻项）",
       "base_image": "mobile-harness-deveco-v2-20261103",
       "result_image": "simple-calendar-glm-deveco-v2-20261106",
       "image_url": null,
@@ -913,12 +913,12 @@
       "prompt_version": "v2",
       "archive_sha256": "bef4d76ae78866ccab870802dc91933f4c9fe1bb5e6c491d447ad7bd03f9fff0",
       "metrics": {
-        "functional_score": null,
+        "functional_score": 2.4,
         "ui_score": null,
         "total_tokens": null,
         "duration_seconds": null
       },
-      "metrics_note": "未独立验收，指标未核算。",
+      "metrics_note": "2026-11-09最新标准，English；功能 4/169，失败 1，受阻/跳过 164；暂无该应用的标准UI参考图。应用和标准未修改；只按最后有效执行合并，受阻保留在分母。多数受阻来自标准导航步骤与当前界面不一致；草稿 8 条单列，低通过率不等于全部应用缺陷。",
       "app": "Simple-Calendar"
     },
     {
@@ -929,7 +929,7 @@
       "harness": "OpenCode",
       "harness_version": "1.18.23",
       "migration": "迁移自报完成",
-      "evaluation": "未独立验收",
+      "evaluation": "已独立测试（含受阻项）",
       "base_image": "mobile-harness-opencode-v1-20261028",
       "result_image": "simple-calendar-glm-opencode-v2-20261106",
       "image_url": null,
@@ -942,12 +942,12 @@
       "prompt_version": "v2",
       "archive_sha256": "f5447e9e3e893bbe016b525a45cb09ce73cfec6897dc7ff9dd310fd766129d33",
       "metrics": {
-        "functional_score": null,
+        "functional_score": 12.4,
         "ui_score": null,
         "total_tokens": null,
         "duration_seconds": null
       },
-      "metrics_note": "未独立验收，指标未核算。",
+      "metrics_note": "2026-11-09最新标准，English；功能 21/169，失败 1，受阻/跳过 147；暂无该应用的标准UI参考图。应用和标准未修改；只按最后有效执行合并，受阻保留在分母。多数受阻来自标准导航步骤与当前界面不一致；草稿 8 条单列，低通过率不等于全部应用缺陷。",
       "app": "Simple-Calendar"
     },
     {

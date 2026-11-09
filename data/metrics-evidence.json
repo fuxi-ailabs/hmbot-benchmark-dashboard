@@ -910,5 +910,971 @@
       }
     ],
     "limitations": "130 gate blocked counted as not passed. Two scrolling binding failures remain under default 5% retest threshold; one invalid-name input/Save outcome uncertain. Historical baseline did not execute seed skill. Native failures do not imply independent defects."
+  },
+  "cofi-glm-claude-v2-20261106": {
+    "run_id": "cofi-glm-claude-v2-20261106",
+    "test_run_id": "cofi-glm-claude-v2-20261106-test-20261109",
+    "updated": "2026-11-09T12:23:11.172851+08:00",
+    "score_source": {
+      "path": "benchmark-runs/recent-six-20261109/cofi-glm-claude-v2-20261106/summary.json",
+      "sha256": "6d6fd0afc8f401c0642a6124b53a89b5f8d3af541e2a4b744aa65b4609f35d9b"
+    },
+    "hap_sha256": "259ab2bccf7c0f389f0adb7a7b659d62b6bc1bb4ccae8789b3aa2f2d2227e7f4",
+    "benchmark_commit": "6963291214b1ae2b856d7737a39fd251cf7ee749",
+    "functional": {
+      "passed": 0,
+      "total": 335,
+      "failed": 0,
+      "blocked_or_draft": 335,
+      "draft": 0,
+      "execution_attempts": 0,
+      "merged_executed_cases": 0,
+      "remaining_causes": {
+        "prerequisite": 335
+      },
+      "basis": "All 335 standard cases blocked by independently reproduced startup crash; zero standard executions, not 335 independent application failures."
+    },
+    "rounds": [],
+    "round2_trigger": {
+      "B": 0,
+      "N": 335,
+      "ratio": 0,
+      "triggered": false,
+      "reason": "Launch crash is an app prerequisite failure, not a binding defect",
+      "second_round": false,
+      "threshold": 0.05,
+      "comparison": "strictly greater than"
+    },
+    "ui": {
+      "score": null,
+      "partial_score": null,
+      "scorer_sha256": null,
+      "oracle_hashes": {},
+      "dino_model": null,
+      "weights": null,
+      "expected_pages": 3,
+      "limitation": "App launch crash; no app page captured, system Settings screenshot excluded",
+      "pages": 0,
+      "source": null,
+      "method": "Current benchmark ui-textbox; English; same HAP; no missing-page imputation.",
+      "per_page": {}
+    },
+    "environment": {
+      "system_language": "English",
+      "region": "China",
+      "device_concurrency": 1,
+      "test_devices_closed": true
+    },
+    "usage": {
+      "total_tokens": null,
+      "duration_seconds": null,
+      "definition": "Existing migration usage preserved; no test duration substituted."
+    },
+    "sources": [
+      {
+        "path": "benchmark-runs/recent-six-20261109/cofi-glm-claude-v2-20261106/binding.diff",
+        "sha256": "93bc33638c68c123cd7344847c4ca947e87452e688cf79c0b153a9417ca8c898"
+      },
+      {
+        "path": "benchmark-runs/recent-six-20261109/cofi-glm-claude-v2-20261106/runtime.diff",
+        "sha256": "81498df51a53460eb9e4f6020947705ba8708fc1ee2410a95ed8bb96c9d9fde9"
+      },
+      {
+        "path": "benchmark-runs/recent-six-20261109/cofi-glm-claude-v2-20261106/summary.json",
+        "sha256": "6d6fd0afc8f401c0642a6124b53a89b5f8d3af541e2a4b744aa65b4609f35d9b"
+      },
+      {
+        "path": "benchmark-runs/recent-six-20261109/cofi-glm-claude-v2-20261106/merged-tests.json",
+        "sha256": "6ea0022e2d8909959bcb15b072de689887dc7050f93b7467dbd9e8d2cdd7f82d"
+      },
+      {
+        "path": "benchmark-runs/recent-six-20261109/cofi-glm-claude-v2-20261106/case-analysis.json",
+        "sha256": "e7329360113daf5da8e34e830ee041062aa8d546ee4a6e1264b72a18fef0d0b1"
+      },
+      {
+        "path": "benchmark-runs/recent-six-20261109/cofi-glm-claude-v2-20261106/round2-decision.json",
+        "sha256": "a0d477366873a8afc47d13369523072a1fabfd990ded1d0051ef2effcf1aa567"
+      },
+      {
+        "path": "benchmark-runs/recent-six-20261109/cofi-glm-claude-v2-20261106/final-verification.json",
+        "sha256": "456f0609298f27fc38856de9d7c3dc56e31866c9c4070614b8b762ca45cb5f42"
+      },
+      {
+        "path": "benchmark-runs/recent-six-20261109/cofi-glm-claude-v2-20261106/cleanup.json",
+        "sha256": "87c6be717047d18659b485face843106bf51ec3da7cd47958926a82115fbbb4d"
+      }
+    ],
+    "limitations": "Unresolved and blocked tests remain in denominator. Raw evidence is retained locally."
+  },
+  "cofi-glm-deveco-v2-20261106": {
+    "run_id": "cofi-glm-deveco-v2-20261106",
+    "test_run_id": "cofi-glm-deveco-v2-20261106-test-20261109",
+    "updated": "2026-11-09T12:23:11.175618+08:00",
+    "score_source": {
+      "path": "benchmark-runs/recent-six-20261109/cofi-glm-deveco-v2-20261106/summary.json",
+      "sha256": "1157240809df37fb97e4422741fbe37085bf37c1839910e8a42f1efea3f82b15"
+    },
+    "hap_sha256": "1855217dcbfe25f9046c483c7d6333d6194729964618300173be5bd11c35efd9",
+    "benchmark_commit": "6963291214b1ae2b856d7737a39fd251cf7ee749",
+    "functional": {
+      "passed": 146,
+      "total": 335,
+      "failed": 4,
+      "blocked_or_draft": 185,
+      "draft": 0,
+      "execution_attempts": 228,
+      "merged_executed_cases": 150,
+      "remaining_causes": {
+        "prerequisite": 87,
+        "application": 4,
+        "unresolved": 98
+      },
+      "basis": "Last valid formal execution by case ID; gate blocked cases retained in denominator; diagnostic results excluded."
+    },
+    "rounds": [
+      {
+        "phase": "round1",
+        "executed": 133,
+        "passed": 127,
+        "started_at": "2026-11-09T03:18:29.963665+00:00",
+        "ended_at": "2026-11-09T03:38:37.842497+00:00"
+      },
+      {
+        "phase": "round2",
+        "executed": 95,
+        "passed": 94,
+        "started_at": "2026-11-09T03:45:21.008313+00:00",
+        "ended_at": "2026-11-09T04:00:12.773294+00:00"
+      }
+    ],
+    "round2_trigger": {
+      "confirmed_binding_cases": 20,
+      "all_cases": 335,
+      "ratio": 0.05970149253731343,
+      "threshold": 0.05,
+      "operator": ">",
+      "second_round": true,
+      "confirmed_cases": [
+        {
+          "id": "FC069",
+          "targets": [
+            "配方列表已就绪｜FC069"
+          ],
+          "evidence": [
+            "observations/home-bind.json"
+          ]
+        },
+        {
+          "id": "FC118",
+          "targets": [
+            "更新提示标题",
+            "更新提示正文"
+          ],
+          "evidence": [
+            "observations/home-before.json"
+          ]
+        },
+        {
+          "id": "FC119",
+          "targets": [
+            "更新提示标题",
+            "更新提示正文"
+          ],
+          "evidence": [
+            "observations/home-before.json"
+          ]
+        },
+        {
+          "id": "FC120",
+          "targets": [
+            "更新提示标题",
+            "更新提示正文"
+          ],
+          "evidence": [
+            "observations/home-before.json"
+          ]
+        },
+        {
+          "id": "FC147",
+          "targets": [
+            "计时进度环"
+          ],
+          "evidence": [
+            "observations/timer-running.jpeg"
+          ]
+        },
+        {
+          "id": "FC149",
+          "targets": [
+            "计时进度环"
+          ],
+          "evidence": [
+            "observations/timer-running.jpeg"
+          ]
+        },
+        {
+          "id": "FC151",
+          "targets": [
+            "当前步骤名称文本"
+          ],
+          "evidence": [
+            "observations/timer-running.json"
+          ]
+        },
+        {
+          "id": "FC158",
+          "targets": [
+            "当前步骤名称文本"
+          ],
+          "evidence": [
+            "observations/timer-running.json"
+          ]
+        },
+        {
+          "id": "FC165",
+          "targets": [
+            "计时进度环"
+          ],
+          "evidence": [
+            "observations/timer-running.jpeg"
+          ]
+        },
+        {
+          "id": "FC167",
+          "targets": [
+            "计时进度环"
+          ],
+          "evidence": [
+            "observations/timer-running.jpeg"
+          ]
+        },
+        {
+          "id": "FC169",
+          "targets": [
+            "计时进度环"
+          ],
+          "evidence": [
+            "observations/timer-running.jpeg"
+          ]
+        },
+        {
+          "id": "FC170",
+          "targets": [
+            "计时进度环"
+          ],
+          "evidence": [
+            "observations/timer-running.jpeg"
+          ]
+        },
+        {
+          "id": "FC171",
+          "targets": [
+            "当前步骤名称文本"
+          ],
+          "evidence": [
+            "observations/timer-running.json"
+          ]
+        },
+        {
+          "id": "FC172",
+          "targets": [
+            "当前步骤名称文本"
+          ],
+          "evidence": [
+            "observations/timer-running.json"
+          ]
+        },
+        {
+          "id": "FC177",
+          "targets": [
+            "计时进度环"
+          ],
+          "evidence": [
+            "observations/timer-running.jpeg"
+          ]
+        },
+        {
+          "id": "FC183",
+          "targets": [
+            "「下一个」标题文本"
+          ],
+          "evidence": [
+            "observations/timer-running.json"
+          ]
+        },
+        {
+          "id": "FC184",
+          "targets": [
+            "下一步预览条目"
+          ],
+          "evidence": [
+            "observations/timer-running.json"
+          ]
+        },
+        {
+          "id": "FC185",
+          "targets": [
+            "下一步预览条目"
+          ],
+          "evidence": [
+            "observations/timer-running.json"
+          ]
+        },
+        {
+          "id": "FC244",
+          "targets": [
+            "步骤时长输入框"
+          ],
+          "evidence": [
+            "round1/evidence/FC244/tree.json"
+          ],
+          "reason": "Duration input is clipped to 36 px and its label lies outside the visible List; standard lookup permits scrolling, but current adapter does not scroll this native List."
+        },
+        {
+          "id": "FC249",
+          "targets": [
+            "步骤时长输入框"
+          ],
+          "evidence": [
+            "round1/evidence/FC249/tree.json"
+          ],
+          "reason": "Duration input is clipped to 36 px and its label lies outside the visible List; standard lookup permits scrolling, but current adapter does not scroll this native List."
+        }
+      ],
+      "exclusions": [
+        "FC148: earlier missing detail title is an application prerequisite",
+        "FC062: earlier missing Settings title is an application prerequisite"
+      ],
+      "additional_regression": "Shared recipe-name clearing fix also needs regression; source and screenshots show unintended description opening during replacement. No higher pass rate is assumed."
+    },
+    "ui": {
+      "score": 79.4,
+      "partial_score": null,
+      "scorer_sha256": "b71239968746c0691957e5d4571c5c9170333e7bf93fba575475d17363adc1d8",
+      "oracle_hashes": {
+        "datasets/ui/oracle/cofi/prd_texts.json": "95dcaca68869a1c84c2e76b35a8310bf447dd0c478d6822013985944ce713063",
+        "datasets/ui/oracle/cofi/pages.json": "66601e71d9d5d01d58977d619bd42224dd13f57d7a80851f0666c4f606f05197",
+        "datasets/ui/oracle/cofi/page_0003_recipe_edit/screenshot.png": "5e539865cd0e3ad0f88a2654b0d8766c5eff86eebae1ab9984b2f6f4e919d707",
+        "datasets/ui/oracle/cofi/page_0003_recipe_edit/view.xml": "a1c6afa24b6eb5d7cc82abee2f161423329dc1646f09978cb38501b6a99d8ab3",
+        "datasets/ui/oracle/cofi/page_0003_recipe_edit/meta.json": "40a47ad2e1175e51dc1d3896a909e0d1a00ab58db2ec36ce694502fc320332d9",
+        "datasets/ui/oracle/cofi/page_0002_recipe_details/screenshot.png": "203d02f326645df0de5232cbc64da9864b65f3a00975faf3d1648e212073c498",
+        "datasets/ui/oracle/cofi/page_0002_recipe_details/view.xml": "54142a8e5ce80bdfe972d6f69584037eb65b6125d20679062853b5a5b18e3e18",
+        "datasets/ui/oracle/cofi/page_0002_recipe_details/meta.json": "ee045330a01b465b56c031644c80cdd352d15112a73ad3eca203c791533e85d5",
+        "datasets/ui/oracle/cofi/page_0001_launch/screenshot.png": "81e1e89ccec071b5862e27846eb6feb1108de01c9d14a13972c892cbb00f4058",
+        "datasets/ui/oracle/cofi/page_0001_launch/view.xml": "90c2074cc7b7ec3f6182b874800c0d98379872716caf3a5080cf0e761c9f6781",
+        "datasets/ui/oracle/cofi/page_0001_launch/meta.json": "c89c922974ce506950acf9b87b336c56c546ca462bfba74531cf08a5af378796"
+      },
+      "dino_model": "facebook/dinov2-base",
+      "weights": {
+        "text_recall": 0.25,
+        "text_precision": 0.1,
+        "position": 0.1,
+        "shift": 0.05,
+        "order": 0.05,
+        "size": 0.05,
+        "dino": 0.3,
+        "dino_raw": 0.1
+      },
+      "expected_pages": 3,
+      "limitation": null,
+      "pages": 3,
+      "source": {
+        "path": "benchmark-runs/recent-six-20261109/cofi-glm-deveco-v2-20261106/ui-scores/cofi-glm-deveco-v2-20261106.json",
+        "sha256": "d0318cbd3991155f1daf49cc56e1c68eb9136523fb3926116e514fd1c447c932"
+      },
+      "method": "Current benchmark ui-textbox; English; same HAP; no missing-page imputation.",
+      "per_page": {
+        "page_0001_launch": 79.5,
+        "page_0002_recipe_details": 72.4,
+        "page_0003_recipe_edit": 86.2
+      }
+    },
+    "environment": {
+      "system_language": "English",
+      "region": "China",
+      "device_concurrency": 1,
+      "test_devices_closed": true
+    },
+    "usage": {
+      "total_tokens": null,
+      "duration_seconds": null,
+      "definition": "Existing migration usage preserved; no test duration substituted."
+    },
+    "sources": [
+      {
+        "path": "benchmark-runs/recent-six-20261109/cofi-glm-deveco-v2-20261106/binding.diff",
+        "sha256": "4e9668c26a5b9f71ef64ceca35ad20e3c0a239af54f2ceabc84edf45ff3c7179"
+      },
+      {
+        "path": "benchmark-runs/recent-six-20261109/cofi-glm-deveco-v2-20261106/runtime.diff",
+        "sha256": "02dc3b4ae049ca9827f250804c3bffb59d4d297f23fefb2b1d034eb1e75509d4"
+      },
+      {
+        "path": "benchmark-runs/recent-six-20261109/cofi-glm-deveco-v2-20261106/summary.json",
+        "sha256": "1157240809df37fb97e4422741fbe37085bf37c1839910e8a42f1efea3f82b15"
+      },
+      {
+        "path": "benchmark-runs/recent-six-20261109/cofi-glm-deveco-v2-20261106/merged-tests.json",
+        "sha256": "646a36d85cff57f5e86c1b2ba7fc008c974c3f15abe85fdb00c6a56269ef54f9"
+      },
+      {
+        "path": "benchmark-runs/recent-six-20261109/cofi-glm-deveco-v2-20261106/case-analysis.json",
+        "sha256": "579348f3aa54a47ae1743ca466eb82a03642cf03d0258afc7de2bbb921020c33"
+      },
+      {
+        "path": "benchmark-runs/recent-six-20261109/cofi-glm-deveco-v2-20261106/round2-decision.json",
+        "sha256": "292fbaf4f8af95ca0f41aaf8420cef0f9710cf0db8d0e8b20b71adb9ae68da47"
+      },
+      {
+        "path": "benchmark-runs/recent-six-20261109/cofi-glm-deveco-v2-20261106/round2-selection.json",
+        "sha256": "f6203042dc2fd3b9216c408fb63861189309eea5547e6c210ef18adf0988a94a"
+      },
+      {
+        "path": "benchmark-runs/recent-six-20261109/cofi-glm-deveco-v2-20261106/final-verification.json",
+        "sha256": "0a1e6b782678f1fb46c2ff5dcaa1f66575eab9f866239475602cb0289d6b3131"
+      },
+      {
+        "path": "benchmark-runs/recent-six-20261109/cofi-glm-deveco-v2-20261106/cleanup.json",
+        "sha256": "98f6b30aee02374fdc9eea03b2739f2193b1ccfbde7dc2f01c1c47b58646ed16"
+      },
+      {
+        "path": "benchmark-runs/recent-six-20261109/cofi-glm-deveco-v2-20261106/ui-environment.json",
+        "sha256": "d6f1586146d073cb89eafa42dd85df2a64311bd59a323198989b6b5b06df97c1"
+      },
+      {
+        "path": "benchmark-runs/recent-six-20261109/cofi-glm-deveco-v2-20261106/preflight-findings.json",
+        "sha256": "3bdcb4b19187bd7298c1b04d57eca6c99121b52a081e91178ddf3c85f4367f8d"
+      },
+      {
+        "path": "benchmark-runs/recent-six-20261109/cofi-glm-deveco-v2-20261106/round1/tests.json",
+        "sha256": "e42f028e4d28ba8e088a914bac9062d2a9757f957a9a30b860be733a0843d623"
+      },
+      {
+        "path": "benchmark-runs/recent-six-20261109/cofi-glm-deveco-v2-20261106/round1/gate-report.json",
+        "sha256": "d32b3ee803d96a28c82045076ceacc751aeb0c43c8fadbc8fcd6d5f653d77c64"
+      },
+      {
+        "path": "benchmark-runs/recent-six-20261109/cofi-glm-deveco-v2-20261106/round2/tests.json",
+        "sha256": "8eb563c8bead550cdfda5dddb76eb904e047019a509247df74cc358f0fa988d1"
+      },
+      {
+        "path": "benchmark-runs/recent-six-20261109/cofi-glm-deveco-v2-20261106/round2/gate-report.json",
+        "sha256": "42071023a2b32b11bf61d6a949040ee8c82e2c660bae5344e0d2d0ee15e1b286"
+      }
+    ],
+    "limitations": "Unresolved and blocked tests remain in denominator. Raw evidence is retained locally."
+  },
+  "cofi-glm-opencode-v2-20261106": {
+    "run_id": "cofi-glm-opencode-v2-20261106",
+    "test_run_id": "cofi-glm-opencode-v2-20261106-test-20261109",
+    "updated": "2026-11-09T12:23:11.178985+08:00",
+    "score_source": {
+      "path": "benchmark-runs/recent-six-20261109/cofi-glm-opencode-v2-20261106/summary.json",
+      "sha256": "61ba83ca1775f2e848976fd883c0084fa7e4df07e842b49533ad8e9698653db8"
+    },
+    "hap_sha256": "95eb2c5445bf6b2af171b524b8336aec5d106fcc39ec65144ea6833fb07fc8b7",
+    "benchmark_commit": "6963291214b1ae2b856d7737a39fd251cf7ee749",
+    "functional": {
+      "passed": 12,
+      "total": 335,
+      "failed": 0,
+      "blocked_or_draft": 323,
+      "draft": 0,
+      "execution_attempts": 12,
+      "merged_executed_cases": 12,
+      "remaining_causes": {
+        "prerequisite": 321,
+        "unresolved": 2
+      },
+      "basis": "Last valid formal execution by case ID; gate blocked cases retained in denominator; diagnostic results excluded."
+    },
+    "rounds": [
+      {
+        "phase": "round1",
+        "executed": 12,
+        "passed": 12,
+        "started_at": "2026-11-09T04:03:54.901268+00:00",
+        "ended_at": "2026-11-09T04:04:54.271080+00:00"
+      }
+    ],
+    "round2_trigger": {
+      "B": 0,
+      "N": 335,
+      "ratio": 0,
+      "threshold": 0.05,
+      "comparison": "strictly greater than",
+      "second_round": false,
+      "reason": "Navigation crashes are application prerequisites. No remaining confirmed binding issue above the threshold. Unresolved observations are excluded from B."
+    },
+    "ui": {
+      "score": null,
+      "partial_score": 80.6,
+      "scorer_sha256": "b71239968746c0691957e5d4571c5c9170333e7bf93fba575475d17363adc1d8",
+      "oracle_hashes": {
+        "datasets/ui/oracle/cofi/prd_texts.json": "95dcaca68869a1c84c2e76b35a8310bf447dd0c478d6822013985944ce713063",
+        "datasets/ui/oracle/cofi/pages.json": "66601e71d9d5d01d58977d619bd42224dd13f57d7a80851f0666c4f606f05197",
+        "datasets/ui/oracle/cofi/page_0003_recipe_edit/screenshot.png": "5e539865cd0e3ad0f88a2654b0d8766c5eff86eebae1ab9984b2f6f4e919d707",
+        "datasets/ui/oracle/cofi/page_0003_recipe_edit/view.xml": "a1c6afa24b6eb5d7cc82abee2f161423329dc1646f09978cb38501b6a99d8ab3",
+        "datasets/ui/oracle/cofi/page_0003_recipe_edit/meta.json": "40a47ad2e1175e51dc1d3896a909e0d1a00ab58db2ec36ce694502fc320332d9",
+        "datasets/ui/oracle/cofi/page_0002_recipe_details/screenshot.png": "203d02f326645df0de5232cbc64da9864b65f3a00975faf3d1648e212073c498",
+        "datasets/ui/oracle/cofi/page_0002_recipe_details/view.xml": "54142a8e5ce80bdfe972d6f69584037eb65b6125d20679062853b5a5b18e3e18",
+        "datasets/ui/oracle/cofi/page_0002_recipe_details/meta.json": "ee045330a01b465b56c031644c80cdd352d15112a73ad3eca203c791533e85d5",
+        "datasets/ui/oracle/cofi/page_0001_launch/screenshot.png": "81e1e89ccec071b5862e27846eb6feb1108de01c9d14a13972c892cbb00f4058",
+        "datasets/ui/oracle/cofi/page_0001_launch/view.xml": "90c2074cc7b7ec3f6182b874800c0d98379872716caf3a5080cf0e761c9f6781",
+        "datasets/ui/oracle/cofi/page_0001_launch/meta.json": "c89c922974ce506950acf9b87b336c56c546ca462bfba74531cf08a5af378796"
+      },
+      "dino_model": "facebook/dinov2-base",
+      "weights": {
+        "text_recall": 0.25,
+        "text_precision": 0.1,
+        "position": 0.1,
+        "shift": 0.05,
+        "order": 0.05,
+        "size": 0.05,
+        "dino": 0.3,
+        "dino_raw": 0.1
+      },
+      "expected_pages": 3,
+      "limitation": "Partial UI coverage only; full score unavailable. {\"page_0002_recipe_details\": \"Application crashes on entering details; see detail-first and current crash log.\", \"page_0003_recipe_edit\": \"Application crashes on entering new recipe; see editor-first and current crash log.\"}",
+      "pages": 1,
+      "source": {
+        "path": "benchmark-runs/recent-six-20261109/cofi-glm-opencode-v2-20261106/ui-scores/cofi-glm-opencode-v2-20261106.json",
+        "sha256": "c76348d502296032243efb3d97ba79c8f6ad9e69e22c8a586b198e05830bdd31"
+      },
+      "method": "Current benchmark ui-textbox; English; same HAP; no missing-page imputation.",
+      "per_page": {
+        "page_0001_launch": 80.6
+      }
+    },
+    "environment": {
+      "system_language": "English",
+      "region": "China",
+      "device_concurrency": 1,
+      "test_devices_closed": true
+    },
+    "usage": {
+      "total_tokens": null,
+      "duration_seconds": null,
+      "definition": "Existing migration usage preserved; no test duration substituted."
+    },
+    "sources": [
+      {
+        "path": "benchmark-runs/recent-six-20261109/cofi-glm-opencode-v2-20261106/binding.diff",
+        "sha256": "e6fc39b4e427a361b855e8f0216bd4b9d187188730b2c52d901a5876b496b797"
+      },
+      {
+        "path": "benchmark-runs/recent-six-20261109/cofi-glm-opencode-v2-20261106/runtime.diff",
+        "sha256": "249a0de8313a3d472e3eeadb0977585eb903b60e37322f9bc4917414a5a6f28b"
+      },
+      {
+        "path": "benchmark-runs/recent-six-20261109/cofi-glm-opencode-v2-20261106/ui-missing-pages.json",
+        "sha256": "6daa26088d6fecd570f5fce3d9f598e42863732dc21934d1b0ba4dc95ed9dee4"
+      },
+      {
+        "path": "benchmark-runs/recent-six-20261109/cofi-glm-opencode-v2-20261106/summary.json",
+        "sha256": "61ba83ca1775f2e848976fd883c0084fa7e4df07e842b49533ad8e9698653db8"
+      },
+      {
+        "path": "benchmark-runs/recent-six-20261109/cofi-glm-opencode-v2-20261106/merged-tests.json",
+        "sha256": "5469d7af3b0945cfe9be4a52378ecef7002863abc8f769372f35d9d253311ca1"
+      },
+      {
+        "path": "benchmark-runs/recent-six-20261109/cofi-glm-opencode-v2-20261106/case-analysis.json",
+        "sha256": "094f9265a6096c12b4a7d892f612db139f18cd2ceb5c244ee4d30242859f8547"
+      },
+      {
+        "path": "benchmark-runs/recent-six-20261109/cofi-glm-opencode-v2-20261106/round2-decision.json",
+        "sha256": "2cde0266442039ac6f3ac4bbdcc941e41c314b23222ca4a78983c2b0efad1395"
+      },
+      {
+        "path": "benchmark-runs/recent-six-20261109/cofi-glm-opencode-v2-20261106/final-verification.json",
+        "sha256": "0a1e6b782678f1fb46c2ff5dcaa1f66575eab9f866239475602cb0289d6b3131"
+      },
+      {
+        "path": "benchmark-runs/recent-six-20261109/cofi-glm-opencode-v2-20261106/cleanup.json",
+        "sha256": "ad8f4677103026dceba805a03510ac5f9d06fef8458024ecc45658d0c9d4c69e"
+      },
+      {
+        "path": "benchmark-runs/recent-six-20261109/cofi-glm-opencode-v2-20261106/ui-environment.json",
+        "sha256": "b613fcd7ee4ec2dd35b8daf093f02f29dbb1ff91046af79308ddab67b1b9efa7"
+      },
+      {
+        "path": "benchmark-runs/recent-six-20261109/cofi-glm-opencode-v2-20261106/preflight-findings.json",
+        "sha256": "e165507c02787e0624524672541c08b0120dac829848b208c5f48d738926c13c"
+      },
+      {
+        "path": "benchmark-runs/recent-six-20261109/cofi-glm-opencode-v2-20261106/round1/tests.json",
+        "sha256": "a5f4cceb3000551acaf84b11c9a9e2aae3207c3206f234cacf47aea63f636347"
+      },
+      {
+        "path": "benchmark-runs/recent-six-20261109/cofi-glm-opencode-v2-20261106/round1/gate-report.json",
+        "sha256": "c1ab0e865704d7199c5ffb7292d1c83efe6116b5eaffce1b16a73ae185f2040f"
+      }
+    ],
+    "limitations": "Unresolved and blocked tests remain in denominator. Raw evidence is retained locally."
+  },
+  "simple-calendar-glm-claude-v2-20261106": {
+    "run_id": "simple-calendar-glm-claude-v2-20261106",
+    "test_run_id": "simple-calendar-glm-claude-v2-20261106-test-20261109",
+    "updated": "2026-11-09T12:23:11.181922+08:00",
+    "score_source": {
+      "path": "benchmark-runs/recent-six-20261109/simple-calendar-glm-claude-v2-20261106/summary.json",
+      "sha256": "29fb7e29be65b4e45b31451501982cf7e47034aaff616439fb5b8b751ac8fbc5"
+    },
+    "hap_sha256": "434d1279d205cb590f8b05685d416dd89d70b84d3684287807934b0932f5b904",
+    "benchmark_commit": "6963291214b1ae2b856d7737a39fd251cf7ee749",
+    "functional": {
+      "passed": 3,
+      "total": 169,
+      "failed": 1,
+      "blocked_or_draft": 165,
+      "draft": 8,
+      "execution_attempts": 4,
+      "merged_executed_cases": 4,
+      "remaining_causes": {
+        "test_method_gap": 138,
+        "prerequisite": 16,
+        "application": 12
+      },
+      "basis": "Last valid formal execution by case ID; gate blocked cases retained in denominator; diagnostic results excluded."
+    },
+    "rounds": [
+      {
+        "phase": "round1",
+        "executed": 4,
+        "passed": 3,
+        "started_at": "2026-11-09T04:13:36.044789+00:00",
+        "ended_at": "2026-11-09T04:14:20.427029+00:00"
+      }
+    ],
+    "round2_trigger": {
+      "B": 0,
+      "N": 169,
+      "ratio": 0,
+      "threshold": 0.05,
+      "comparison": "strictly greater than",
+      "second_round": false,
+      "reason": "Remaining confirmed causes are standard navigation gaps or absent application entries. No additional confirmed binding-affected case after calibration."
+    },
+    "ui": {
+      "score": null,
+      "partial_score": null,
+      "scorer_sha256": null,
+      "oracle_hashes": {},
+      "dino_model": null,
+      "weights": null,
+      "expected_pages": null,
+      "limitation": "No current UI oracle for this app, or capture unavailable; not a zero score.",
+      "pages": 0,
+      "source": null,
+      "method": "Current benchmark ui-textbox; English; same HAP; no missing-page imputation.",
+      "per_page": {}
+    },
+    "environment": {
+      "system_language": "English",
+      "region": "China",
+      "device_concurrency": 1,
+      "test_devices_closed": true
+    },
+    "usage": {
+      "total_tokens": null,
+      "duration_seconds": null,
+      "definition": "Existing migration usage preserved; no test duration substituted."
+    },
+    "sources": [
+      {
+        "path": "benchmark-runs/recent-six-20261109/simple-calendar-glm-claude-v2-20261106/binding.diff",
+        "sha256": "8b6f39661a6f8a3e670160cfdc81fb9042bddcebee2091683ea635630964b9cb"
+      },
+      {
+        "path": "benchmark-runs/recent-six-20261109/simple-calendar-glm-claude-v2-20261106/runtime.diff",
+        "sha256": "81498df51a53460eb9e4f6020947705ba8708fc1ee2410a95ed8bb96c9d9fde9"
+      },
+      {
+        "path": "benchmark-runs/recent-six-20261109/simple-calendar-glm-claude-v2-20261106/ui-unavailable.json",
+        "sha256": "68e46c9e8f0f3785e64b270c2cb92acf8ea29c955edf72b682b1e4c5445a7f51"
+      },
+      {
+        "path": "benchmark-runs/recent-six-20261109/simple-calendar-glm-claude-v2-20261106/infrastructure-retry.json",
+        "sha256": "640b99c05cdab5ffc5c7de87cec5211e188f3bc37ccd16dda0c36a73e968261f"
+      },
+      {
+        "path": "benchmark-runs/recent-six-20261109/simple-calendar-glm-claude-v2-20261106/summary.json",
+        "sha256": "29fb7e29be65b4e45b31451501982cf7e47034aaff616439fb5b8b751ac8fbc5"
+      },
+      {
+        "path": "benchmark-runs/recent-six-20261109/simple-calendar-glm-claude-v2-20261106/merged-tests.json",
+        "sha256": "6486878a007f9076c8ba1123dfcb9a6fedee2925898c1e9277fb3373b2af6fce"
+      },
+      {
+        "path": "benchmark-runs/recent-six-20261109/simple-calendar-glm-claude-v2-20261106/case-analysis.json",
+        "sha256": "d0defcac4e68cde2132e737c76601eb859d9919b5f6072ef56a5b4b6d2a48ee7"
+      },
+      {
+        "path": "benchmark-runs/recent-six-20261109/simple-calendar-glm-claude-v2-20261106/round2-decision.json",
+        "sha256": "777e5c9e8d94dc747b9be210f753ffebec5adc60e9843adfea8c60757983738c"
+      },
+      {
+        "path": "benchmark-runs/recent-six-20261109/simple-calendar-glm-claude-v2-20261106/final-verification.json",
+        "sha256": "54969099162c86232c451420ef2e86ec5c57f9c6d3a4e6ea3955c57be6259684"
+      },
+      {
+        "path": "benchmark-runs/recent-six-20261109/simple-calendar-glm-claude-v2-20261106/cleanup.json",
+        "sha256": "6bb2346e010e3f3ebc570426a4593d336b3b40a500f01602c5de86b2ff6020e9"
+      },
+      {
+        "path": "benchmark-runs/recent-six-20261109/simple-calendar-glm-claude-v2-20261106/preflight-findings.json",
+        "sha256": "cf57f7d15c161ba90962f6fa89489b8165f5d7264cee563a26a1df46bc0bbe60"
+      },
+      {
+        "path": "benchmark-runs/recent-six-20261109/simple-calendar-glm-claude-v2-20261106/round1/tests.json",
+        "sha256": "9804fcd25a854ff7d5c930abab3a7c8d86eee0a6076d7c70f12edd226e01d0e5"
+      },
+      {
+        "path": "benchmark-runs/recent-six-20261109/simple-calendar-glm-claude-v2-20261106/round1/gate-report.json",
+        "sha256": "4810b5be974e847ec3a1a3393ea5f80110479d0751262618cd2dae2c03c6728a"
+      }
+    ],
+    "limitations": "Unresolved and blocked tests remain in denominator. Raw evidence is retained locally."
+  },
+  "simple-calendar-glm-deveco-v2-20261106": {
+    "run_id": "simple-calendar-glm-deveco-v2-20261106",
+    "test_run_id": "simple-calendar-glm-deveco-v2-20261106-test-20261109",
+    "updated": "2026-11-09T12:23:11.184441+08:00",
+    "score_source": {
+      "path": "benchmark-runs/recent-six-20261109/simple-calendar-glm-deveco-v2-20261106/summary.json",
+      "sha256": "1d19c12aeec288698d78e20a13d91fa618bba3cb174fbcb527d671de2a85107d"
+    },
+    "hap_sha256": "52498f8634c761f0b3f1bdc50d4274fbda5acd38291a276630803d562da387d0",
+    "benchmark_commit": "6963291214b1ae2b856d7737a39fd251cf7ee749",
+    "functional": {
+      "passed": 4,
+      "total": 169,
+      "failed": 1,
+      "blocked_or_draft": 164,
+      "draft": 8,
+      "execution_attempts": 5,
+      "merged_executed_cases": 5,
+      "remaining_causes": {
+        "test_method_gap": 138,
+        "prerequisite": 16,
+        "application": 11
+      },
+      "basis": "Last valid formal execution by case ID; gate blocked cases retained in denominator; diagnostic results excluded."
+    },
+    "rounds": [
+      {
+        "phase": "round1",
+        "executed": 5,
+        "passed": 4,
+        "started_at": "2026-11-09T04:11:42.899713+00:00",
+        "ended_at": "2026-11-09T04:12:37.112376+00:00"
+      }
+    ],
+    "round2_trigger": {
+      "B": 0,
+      "N": 169,
+      "ratio": 0,
+      "threshold": 0.05,
+      "comparison": "strictly greater than",
+      "second_round": false,
+      "reason": "Remaining confirmed causes are standard navigation gaps or absent application entries. No additional confirmed binding-affected case after calibration."
+    },
+    "ui": {
+      "score": null,
+      "partial_score": null,
+      "scorer_sha256": null,
+      "oracle_hashes": {},
+      "dino_model": null,
+      "weights": null,
+      "expected_pages": null,
+      "limitation": "No current UI oracle for this app, or capture unavailable; not a zero score.",
+      "pages": 0,
+      "source": null,
+      "method": "Current benchmark ui-textbox; English; same HAP; no missing-page imputation.",
+      "per_page": {}
+    },
+    "environment": {
+      "system_language": "English",
+      "region": "China",
+      "device_concurrency": 1,
+      "test_devices_closed": true
+    },
+    "usage": {
+      "total_tokens": null,
+      "duration_seconds": null,
+      "definition": "Existing migration usage preserved; no test duration substituted."
+    },
+    "sources": [
+      {
+        "path": "benchmark-runs/recent-six-20261109/simple-calendar-glm-deveco-v2-20261106/binding.diff",
+        "sha256": "a1602b01b034880df5d0a87e1b545976304c0f2eafdd532507a51101f27dc31e"
+      },
+      {
+        "path": "benchmark-runs/recent-six-20261109/simple-calendar-glm-deveco-v2-20261106/runtime.diff",
+        "sha256": "81498df51a53460eb9e4f6020947705ba8708fc1ee2410a95ed8bb96c9d9fde9"
+      },
+      {
+        "path": "benchmark-runs/recent-six-20261109/simple-calendar-glm-deveco-v2-20261106/ui-unavailable.json",
+        "sha256": "68e46c9e8f0f3785e64b270c2cb92acf8ea29c955edf72b682b1e4c5445a7f51"
+      },
+      {
+        "path": "benchmark-runs/recent-six-20261109/simple-calendar-glm-deveco-v2-20261106/summary.json",
+        "sha256": "1d19c12aeec288698d78e20a13d91fa618bba3cb174fbcb527d671de2a85107d"
+      },
+      {
+        "path": "benchmark-runs/recent-six-20261109/simple-calendar-glm-deveco-v2-20261106/merged-tests.json",
+        "sha256": "28736fda225e6529fa04fddccfd088f184a3dca3d93d2d5040edface6cd72f82"
+      },
+      {
+        "path": "benchmark-runs/recent-six-20261109/simple-calendar-glm-deveco-v2-20261106/case-analysis.json",
+        "sha256": "515663bd8dc099fc1f20a41e7cad6db7c4940181247b41aa1ccbe65635dfa603"
+      },
+      {
+        "path": "benchmark-runs/recent-six-20261109/simple-calendar-glm-deveco-v2-20261106/round2-decision.json",
+        "sha256": "777e5c9e8d94dc747b9be210f753ffebec5adc60e9843adfea8c60757983738c"
+      },
+      {
+        "path": "benchmark-runs/recent-six-20261109/simple-calendar-glm-deveco-v2-20261106/final-verification.json",
+        "sha256": "54969099162c86232c451420ef2e86ec5c57f9c6d3a4e6ea3955c57be6259684"
+      },
+      {
+        "path": "benchmark-runs/recent-six-20261109/simple-calendar-glm-deveco-v2-20261106/cleanup.json",
+        "sha256": "0c2d0d5ce9180b5b6054b12d3698c82b332413b453566c19e5c974c5a60798b7"
+      },
+      {
+        "path": "benchmark-runs/recent-six-20261109/simple-calendar-glm-deveco-v2-20261106/preflight-findings.json",
+        "sha256": "523b6dfbbf196990f93021b5ec325baf69ffb3863f6a553afe733ad2ca4b7215"
+      },
+      {
+        "path": "benchmark-runs/recent-six-20261109/simple-calendar-glm-deveco-v2-20261106/round1/tests.json",
+        "sha256": "41e561c23cdd3270a920889e5673afd83bcc8d4abe4b1b13f2cee19a05e6ff57"
+      },
+      {
+        "path": "benchmark-runs/recent-six-20261109/simple-calendar-glm-deveco-v2-20261106/round1/gate-report.json",
+        "sha256": "d2597ae5452ffc9ecf5cb129d69f512a0a5ed7102f90997ca207c07b1012c0f1"
+      }
+    ],
+    "limitations": "Unresolved and blocked tests remain in denominator. Raw evidence is retained locally."
+  },
+  "simple-calendar-glm-opencode-v2-20261106": {
+    "run_id": "simple-calendar-glm-opencode-v2-20261106",
+    "test_run_id": "simple-calendar-glm-opencode-v2-20261106-test-20261109",
+    "updated": "2026-11-09T12:23:11.186717+08:00",
+    "score_source": {
+      "path": "benchmark-runs/recent-six-20261109/simple-calendar-glm-opencode-v2-20261106/summary.json",
+      "sha256": "e165dc656b8e3f2a24e5f04d7e245c8b5e58ae84035a0021a0874ad847ebcce0"
+    },
+    "hap_sha256": "3e3042aa0e89aaae0cffddb285003f0fa300022cef6d659fd90218aa29811e64",
+    "benchmark_commit": "6963291214b1ae2b856d7737a39fd251cf7ee749",
+    "functional": {
+      "passed": 21,
+      "total": 169,
+      "failed": 1,
+      "blocked_or_draft": 147,
+      "draft": 8,
+      "execution_attempts": 22,
+      "merged_executed_cases": 22,
+      "remaining_causes": {
+        "test_method_gap": 117,
+        "application": 3,
+        "prerequisite": 28
+      },
+      "basis": "Last valid formal execution by case ID; gate blocked cases retained in denominator; diagnostic results excluded."
+    },
+    "rounds": [
+      {
+        "phase": "round1",
+        "executed": 22,
+        "passed": 21,
+        "started_at": "2026-11-09T04:19:29.291718+00:00",
+        "ended_at": "2026-11-09T04:22:02.300540+00:00"
+      }
+    ],
+    "round2_trigger": {
+      "B": 0,
+      "N": 169,
+      "ratio": 0,
+      "threshold": 0.05,
+      "comparison": "strictly greater than",
+      "second_round": false,
+      "reason": "Only formal failure is the known missing standard More navigation before Settings. No confirmed remaining binding error above threshold; unobserved capabilities are not counted in B."
+    },
+    "ui": {
+      "score": null,
+      "partial_score": null,
+      "scorer_sha256": null,
+      "oracle_hashes": {},
+      "dino_model": null,
+      "weights": null,
+      "expected_pages": null,
+      "limitation": "No current UI oracle for this app, or capture unavailable; not a zero score.",
+      "pages": 0,
+      "source": null,
+      "method": "Current benchmark ui-textbox; English; same HAP; no missing-page imputation.",
+      "per_page": {}
+    },
+    "environment": {
+      "system_language": "English",
+      "region": "China",
+      "device_concurrency": 1,
+      "test_devices_closed": true
+    },
+    "usage": {
+      "total_tokens": null,
+      "duration_seconds": null,
+      "definition": "Existing migration usage preserved; no test duration substituted."
+    },
+    "sources": [
+      {
+        "path": "benchmark-runs/recent-six-20261109/simple-calendar-glm-opencode-v2-20261106/binding.diff",
+        "sha256": "915e3a36a4292bd91bd8b894976c0e8a947b5fb308408415542db3ed9b76450a"
+      },
+      {
+        "path": "benchmark-runs/recent-six-20261109/simple-calendar-glm-opencode-v2-20261106/runtime.diff",
+        "sha256": "81498df51a53460eb9e4f6020947705ba8708fc1ee2410a95ed8bb96c9d9fde9"
+      },
+      {
+        "path": "benchmark-runs/recent-six-20261109/simple-calendar-glm-opencode-v2-20261106/ui-unavailable.json",
+        "sha256": "68e46c9e8f0f3785e64b270c2cb92acf8ea29c955edf72b682b1e4c5445a7f51"
+      },
+      {
+        "path": "benchmark-runs/recent-six-20261109/simple-calendar-glm-opencode-v2-20261106/summary.json",
+        "sha256": "e165dc656b8e3f2a24e5f04d7e245c8b5e58ae84035a0021a0874ad847ebcce0"
+      },
+      {
+        "path": "benchmark-runs/recent-six-20261109/simple-calendar-glm-opencode-v2-20261106/merged-tests.json",
+        "sha256": "5c9d7649ca19945196482bc6e4884a8d0e4d01fd32a6c7bc0de9aeb53d8a5f08"
+      },
+      {
+        "path": "benchmark-runs/recent-six-20261109/simple-calendar-glm-opencode-v2-20261106/case-analysis.json",
+        "sha256": "cb07d66d670e2090278e48f3704f43d997ed7ef9883388fc9617d9732e1bcfcc"
+      },
+      {
+        "path": "benchmark-runs/recent-six-20261109/simple-calendar-glm-opencode-v2-20261106/round2-decision.json",
+        "sha256": "fb74bf7b4a7fbec0d65b034d8b656a37a85bfe02a8c393a132e9bfd02b1077e4"
+      },
+      {
+        "path": "benchmark-runs/recent-six-20261109/simple-calendar-glm-opencode-v2-20261106/final-verification.json",
+        "sha256": "54969099162c86232c451420ef2e86ec5c57f9c6d3a4e6ea3955c57be6259684"
+      },
+      {
+        "path": "benchmark-runs/recent-six-20261109/simple-calendar-glm-opencode-v2-20261106/cleanup.json",
+        "sha256": "fcd8af93d4bd40b66939c2dd7827d12e22f46ce8d871a5ec2adeaddf6a257e48"
+      },
+      {
+        "path": "benchmark-runs/recent-six-20261109/simple-calendar-glm-opencode-v2-20261106/preflight-findings.json",
+        "sha256": "e66525e74fe3407f78f032f299e3f6f0776f5678b05bf2b6fa70e11ecca08166"
+      },
+      {
+        "path": "benchmark-runs/recent-six-20261109/simple-calendar-glm-opencode-v2-20261106/round1/tests.json",
+        "sha256": "22ffac8ca7d2d16f45f37cadc33c5a6c32e82c790d79823ac266a8679492d5d7"
+      },
+      {
+        "path": "benchmark-runs/recent-six-20261109/simple-calendar-glm-opencode-v2-20261106/round1/gate-report.json",
+        "sha256": "5f9f8567bbd8a21c12a4999bf86511f9b6a79088b8cce900e0bd30d5e20c567e"
+      }
+    ],
+    "limitations": "Unresolved and blocked tests remain in denominator. Raw evidence is retained locally."
   }
 }
