@@ -48,9 +48,6 @@
 | GLM / glm-5.3 | DevEco Code 0.2.3 | omni-notes-glm-deveco-v2-20261106 | 待发布 | 待发布 | 待发布 | 待发布 | 未独立验收，指标未核算。 |
 | GLM / glm-5.3 | OpenCode 1.18.23 | omni-notes-glm-opencode-v2-20261106 | 待发布 | 待发布 | 待发布 | 待发布 | 未独立验收，指标未核算。 |
 | GLM / glm-5.3 | Claude Code 2.1.312 | omni-notes-glm-claude-v2-20261106 | 待发布 | 待发布 | 待发布 | 待发布 | 未独立验收，指标未核算。 |
-| DeepSeek Flash / deepseek-flash | Claude Code 2.1.267 | cofi-test-determinism-20261109-a | 71.0448 / 100 | 84.1 / 100 | 待发布 | 待发布 | 通过 238/335；最终门禁阻塞 77；UI 3/3 页。三重复评测，功能分保持全部标准用例分母。第二轮按 B/N>5% 触发；本轮模型与适配差异见指标来源。迁移 Token/耗时未重复计入。 |
-| DeepSeek Flash / deepseek-flash | Claude Code 2.1.267 | cofi-test-determinism-20261109-b | 67.7612 / 100 | 84.1 / 100 | 待发布 | 待发布 | 通过 227/335；最终门禁阻塞 92；UI 3/3 页。三重复评测，功能分保持全部标准用例分母。第二轮按 B/N>5% 触发；本轮模型与适配差异见指标来源。迁移 Token/耗时未重复计入。 |
-| DeepSeek Flash / deepseek-flash | Claude Code 2.1.267 | cofi-test-determinism-20261109-c | 50.1493 / 100 | 84.1 / 100 | 待发布 | 待发布 | 通过 168/335；最终门禁阻塞 150；UI 3/3 页。三重复评测，功能分保持全部标准用例分母。第二轮按 B/N>5% 触发；本轮模型与适配差异见指标来源。迁移 Token/耗时未重复计入。 |
 
 ## 迁移实验进度
 
@@ -97,9 +94,6 @@
 | GLM / glm-5.3 | 迁移自报完成；未独立验收 | `mobile-harness-deveco-v2-20261103` | Omni-Notes / GLM5.3 / 高保真v2。整体自报后全部5会话>=15分钟静默核验，无未结束操作；1552文件/内部相对链接/原生日志SHA安全归档，专属手机10270/relay18870/Tart全停，磁盘保留。自报构建成功；称无USB设备/镜像区域限制，未设备运行验证，本轮device-control通道预检已通过。保留限制和流程偏差，非独立验收。 |
 | GLM / glm-5.3 | 迁移自报完成；未独立验收 | `mobile-harness-opencode-v1-20261028` | Omni-Notes / GLM5.3 / 高保真v2。整体自报后全部会话>=15分钟静默核验，无未结束操作；1437文件/内部相对链接/原生日志SHA安全归档，签名凭据文件排除。专属手机10280/relay18880/Tart全停，磁盘保留。自报构建、自签名安装、启动主列表稳定；曾用分阶段构建与OCR排查启动崩溃，无模型图像输入及tap/input通道，深层交互未实际操作验证。保留陈旧todo与流程偏差，非独立验收。 |
 | GLM / glm-5.3 | 迁移自报完成；未独立验收 | `mobile-harness-claude-v1-20261028` | Omni-Notes / GLM5.3 / 高保真v2。整体自报后全部会话>=15分钟静默及无未结束操作核验；1700文件/内部相对链接/原生日志SHA安全归档，凭据排除，专属手机10260/relay18860/Tart全停，磁盘保留。自报103ets、最终unsignedHAP安装启动主界面，临时探针构建验证preferences跨冷启动持久化后已移除；无真实tap深层流程或Android对照。保留AES ECB改CBC导致密文格式变化等限制与流程偏差，非独立验收。 |
-| DeepSeek Flash / deepseek-flash | 迁移自报完成；独立评测复现 A 完成；仍有未通过与阻塞 | `mobile-dev-base-v2-20261026` | 同一 Cofi HAP 的独立评测复现 A；来源运行 cofi-harmony-deepseek-20261026。评测器为 Codex CLI 0.166.0 / gpt-6.1-sol / high，原生 workspace-write 沙盒、独立工作目录和专属手机；相同初始 benchmark commit、skill 与一句话 prompt。功能适配分别生成，保留全部尝试并采用最后有效执行；模型/Harness 列仍表示原迁移产物的来源。 |
-| DeepSeek Flash / deepseek-flash | 迁移自报完成；独立评测复现 B 完成；仍有未通过与阻塞 | `mobile-dev-base-v2-20261026` | 同一 Cofi HAP 的独立评测复现 B；来源运行 cofi-harmony-deepseek-20261026。评测器为 Codex CLI 0.166.0 / gpt-6.1-sol / high，原生 workspace-write 沙盒、独立工作目录和专属手机；相同初始 benchmark commit、skill 与一句话 prompt。功能适配分别生成，保留全部尝试并采用最后有效执行；模型/Harness 列仍表示原迁移产物的来源。 |
-| DeepSeek Flash / deepseek-flash | 迁移自报完成；独立评测复现 C 完成；仍有未通过与阻塞 | `mobile-dev-base-v2-20261026` | 同一 Cofi HAP 的独立评测复现 C；来源运行 cofi-harmony-deepseek-20261026。评测器为 Codex CLI 0.166.0 / gpt-6.1-sol / high，原生 workspace-write 沙盒、独立工作目录和专属手机；相同初始 benchmark commit、skill 与一句话 prompt。功能适配分别生成，保留全部尝试并采用最后有效执行；模型/Harness 列仍表示原迁移产物的来源。 |
 
 ## 实验口径与待锁定项
 
