@@ -1,6 +1,6 @@
 {
-  "source_commit": "a9c346ea3b0f9cba2643cfaebf9c525b74a9e15e",
-  "ledger_sha256": "045c40b5ff2ad6aec541220905d1c2e30539b080fa26b9d6611c1fde4b1e4e06",
-  "ledger_updated": "2026-11-09T12:23:11+08:00",
-  "rows": 34
+  "source_commit": "c6ebd07bef6b3cbea9fa89cb67fcbfe543a26018",
+  "ledger_sha256": "7e5032ec2f34d09472ec0383db3e8eba498f6436c50770b00ad999fefd59a1f1",
+  "ledger_updated": "2026-11-09T15:05:31+08:00",
+  "rows": 37
 }
