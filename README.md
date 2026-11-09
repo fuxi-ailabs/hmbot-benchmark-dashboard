@@ -70,3 +70,15 @@ git push origin HEAD:main
 推送后查看 Actions 和 Pages 部署是否成功，再访问在线 `data/site-version.json`，核对 `ledger_sha256` 与本次结果 JSON 的 SHA-256 一致。页面受缓存和部署时间影响，浏览器刷新后生效；不是已打开页面的实时推送。工作流失败时保留原结果和日志；并发推送冲突时先检查最新 `main`，可手动运行工作流重试，不强推。
 
 工作流仅写回生成文件，使用仓库自动提供的 `GITHUB_TOKEN`（contents/pages write），无需新增个人 Token。若组织策略禁止机器人写入或 Pages 构建，Actions 会显示错误，不应宣称发布成功。
+
+## 按 App 浏览、筛选与排序
+
+根目录 `index.html` 为 App 目录，点击卡片进入对应结果页。页面从现有记录的 `app` 字段自动分组；未提供 `app` 的历史记录归入 Cofi。目前另有 Simple Calendar、Omni Notes 的待测评记录。新增 App 时使用稳定且唯一的英文名称，例如 `app: "Simple-Calendar"`，执行生成器后会生成对应页面和入口。
+
+结果页支持模型准确 ID、Harness、批次的组合筛选、文本搜索、重置，以及功能完备度、UI 分、Token 数和迁移耗时的升降序；点击指标表头也可排序。默认功能完备度降序；缺失指标始终最后，0 值正常排序。筛选与排序保留在网址参数中，可复制分享，其他 App 的记录不会混入当前表格。
+
+批次优先取记录中明确填写的 `batch` 或 `batch_id`，建议新实验填写人可读、同批一致的名称。旧记录兼容使用阶段、运行 ID 日期、Prompt 等信息分组，不根据成绩或模型名称推断批次。
+
+成绩按区间着色并加粗，历史口径、待测评及迁移失败有文字标签；逐行“评分说明与运行记录”中保留原始状态、备注和镜像信息。排序表示查看顺序，不能消除实验口径差异。完整历史内容仍保留在 Markdown 文档中。
+
+生成器现在还使用 `scripts/render_dashboard.py` 生成多 App 页面，共用 `assets/dashboard.css` 与 `assets/dashboard.js`。修改这些文件后也会触发自动更新；工作流写回目录首页及所有 App 页。

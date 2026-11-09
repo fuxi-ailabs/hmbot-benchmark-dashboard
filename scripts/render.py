@@ -78,3 +78,7 @@ md[progress_index:progress_index] = ['## 迁移测评结果', '', results_note, 
 (root/'experiments/cofi-android-harmony.html').write_text(page)
 md += ['', '## 实验口径与待锁定项', '', '- 固定源码：`'+d['source_commit']+'`。每组独立 Tart，8 CPU / 8 GiB，图形化和可见 Terminal。', '- Codex 使用 gpt-6-astra + ChatGPT 登录；实际默认 reasoning effort 为 medium，按用户要求显式设置 high。DeepSeek / GLM 限北京时间 20:00–08:00 启动，最多两台 Tart 并行。', '- 六组历史完成记录已确认复用。历史 Claude Code 为 2.1.267，基础镜像与 prompt 存在差异，不能宣称完全等条件对照。', '- DeepSeek Pro 采用 10/28 重测；10/27 对旧版的测试不混入。其他历史测试存在定位/观测阻塞，不展示为有效综合分。', '- 镜像栏为已核实存在的本地 Tart 克隆名称；远程下载地址尚未提供。发布结果镜像前需去除凭据。本页未上传磁盘或原始日志。', '- OpenCode + GLM、Codex + GLM、DSH + GLM 和双账号实验不计入本矩阵。', '', '[结构化数据](../data/cofi-android-harmony.json) · [HTML 页面](cofi-android-harmony.html)', '']
 (root/'experiments/cofi-android-harmony.md').write_text('\n'.join(md))
+
+# App directory and interactive result views share the validated ledger and formatters.
+from render_dashboard import render
+render(d, metric_value)

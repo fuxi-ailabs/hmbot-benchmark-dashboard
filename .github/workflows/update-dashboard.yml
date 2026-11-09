@@ -5,7 +5,8 @@ on:
     branches: [main]
     paths:
       - 'data/**'
-      - 'scripts/render.py'
+      - 'scripts/render*.py'
+      - 'assets/**'
       - 'index.html'
       - '.nojekyll'
       - '.github/workflows/update-dashboard.yml'
@@ -55,7 +56,7 @@ jobs:
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add experiments/cofi-android-harmony.html experiments/cofi-android-harmony.md data/site-version.json
+          git add index.html experiments/*.html experiments/cofi-android-harmony.md data/site-version.json
           if ! git diff --cached --quiet; then
             git commit -m 'Regenerate migration dashboard from published results'
             # A concurrent human push causes a safe failure; never force-push main.
