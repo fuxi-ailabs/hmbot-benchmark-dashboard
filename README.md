@@ -6,7 +6,7 @@
 
 数据源：`data/cofi-android-harmony.json`。更新数据后运行 `python3 scripts/render.py` 同步生成 HTML 和 GitHub 文档版。页面登记执行进度与历史证据；实验调度由独立队列管理。阶段1复用6组历史结果、补跑5组，最多2台Tart并行，DeepSeek/GLM在北京时间夜间启动。
 
-六组历史迁移自报完成不代表独立验收通过；本地 Tart 克隆名称不等于远程下载地址。已启用 GitHub Pages：<https://mig-everything.github.io/hmbot-benchmark-dashboard/>。
+六组历史迁移自报完成不代表独立验收通过；本地 Tart 克隆名称不等于远程下载地址。已启用 GitHub Pages：<https://fuxi-ailabs.github.io/hmbot-benchmark-dashboard/>。
 
 ## 迁移测评结果
 
@@ -47,9 +47,9 @@ git diff -- data/cofi-android-harmony.json experiments/cofi-android-harmony.md
 
 ## 在线访问与自动更新
 
-在线地址：<https://mig-everything.github.io/hmbot-benchmark-dashboard/experiments/cofi-android-harmony.html#migration-results>
+在线地址：<https://fuxi-ailabs.github.io/hmbot-benchmark-dashboard/experiments/cofi-android-harmony.html#migration-results>
 
-GitHub Pages 已配置为 `main` 的 `/ (root)`。工作流 [Update migration dashboard](https://github.com/mig-everything/hmbot-benchmark-dashboard/actions/workflows/update-dashboard.yml) 会在 `main` 收到 `data/**`、生成脚本、首页或工作流的修改后：
+GitHub Pages 已配置为 `main` 的 `/ (root)`。工作流 [Update migration dashboard](https://github.com/fuxi-ailabs/hmbot-benchmark-dashboard/actions/workflows/update-dashboard.yml) 会在 `main` 收到 `data/**`、生成脚本、首页或工作流的修改后：
 
 1. 读取仓库内最新结果 JSON，生成 HTML 和 GitHub Markdown 文档。
 2. 检查指标格式和运行 ID，提交生成页及 `data/site-version.json`。
